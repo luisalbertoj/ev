@@ -18,6 +18,12 @@ export default defineConfig(({ mode }) => ({
           dir: './dist/analog/public',
           serverDir: './dist/analog/public',
         },
+        routeRules: {
+          '/api/v1/**': {
+            cors: true,
+            headers: { 'access-control-allow-methods': '*' },
+          },
+        },
       },
     }),
   ],
