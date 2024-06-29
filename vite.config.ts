@@ -11,7 +11,16 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog()],
+  plugins: [
+    analog({
+      nitro: {
+        output: {
+          dir: './dist/analog/public',
+          serverDir: './dist/analog/public',
+        },
+      },
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
