@@ -1,0 +1,8 @@
+{
+  "resourceName": "s3leadsupstorageprodab54e87f",
+  "bucketName": "leads-up-storage-prod-ab54e87f",
+  "policyUUID": "eee1c86c",
+  "storageAccess": "authAndGuest",
+  "guestAccess": ["READ"],
+  "authAccess": ["CREATE_AND_UPDATE", "READ", "DELETE"]
+}

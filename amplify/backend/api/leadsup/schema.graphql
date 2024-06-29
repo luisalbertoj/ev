@@ -1,0 +1,1583 @@
+enum EvolinciteTaskStates {
+  PENDING
+  IN_PROGRESS
+  REVIEW
+  COMPLETE
+}
+
+enum EvolinciteActivityTypes {
+  TASK
+  MEETING
+}
+
+enum EvolinciteTypeBankAccounts {
+  AHORRO
+  CORRIENTE
+}
+
+enum EvolinciteTicketState {
+  OPEN
+  SOLVING
+  CLOSED
+}
+
+enum EvolinciteFunctionalities {
+  WALLET_CORE_ROUTE
+  WALLET_PAYMENT_ROUTE
+  WALLET_PAYMENT_LOAD_ALL
+  WALLET_PAYMENT_CREATE
+  WALLET_PAYMENT_EDIT
+  WALLET_PAYMENT_DELETE
+  WALLET_PAYMENT_PROCESS
+  WALLET_PAYMENT_REVERT
+  WALLET_PAYMENT_UPLOAD_FILES
+  WALLET_PAYMENT_EXPORT_FILES
+  WALLET_PAYMENT_LOAD_PERSONAL
+  WALLET_EXPENSE_ROUTE
+  WALLET_EXPENSE_LOAD_ALL
+  WALLET_EXPENSE_CREATE
+  WALLET_EXPENSE_EDIT
+  WALLET_EXPENSE_DELETE
+  WALLET_EXPENSE_PROCESS
+  WALLET_EXPENSE_TYPE_ROUTE
+  WALLET_EXPENSE_TYPE_CREATE
+  WALLET_EXPENSE_TYPE_EDIT
+  WALLET_EXPENSE_TYPE_DELETE
+  WALLET_EXPENSE_REVERT
+  WALLET_EXPENSE_LOAD_PERSONAL
+  WALLET_SALARY_ROUTE
+  WALLET_SALARY_PROCESS
+  WALLET_REPORTS_PAYMENTS_ACCESS
+  WALLET_REPORTS_EXPENSES_ACCESS
+  WALLET_REPORTS_NEGOTIATIONS_ACCESS
+  WALLET_NEGOTIATIONS_DUPLICATED
+  WALLET_NEGOTIATIONS_EXPENSE
+  CRM_CORE_ROUTE
+  CRM_PROCESS_ROUTE
+  CRM_STATE_CREATE
+  CRM_STATE_EDIT
+  CRM_STATE_DELETE
+  CRM_PIPELINE_CREATE
+  CRM_PIPELINE_EDIT
+  CRM_PIPELINE_DELETE
+  CRM_COMMENTARY_CREATE
+  CRM_COMMENTARY_SELECT_FILE
+  CRM_COMMENTARY_SELECT_EMOJI
+  CRM_COMMENTARY_DELETE_ALL
+  CRM_COPY_NEGOTIATION
+  CRM_MOVE_NEGOTIATION
+  CRM_COPY_NEGOTIATION_MASSIVE
+  CRM_MOVE_NEGOTIATION_MASSIVE
+  CRM_FROZEN_NEGOTIATION
+  CRM_FIELD_MANAGER_CORE_ROUTE
+  CRM_FIELD_MANAGER_SECTION_CREATE
+  CRM_FIELD_MANAGER_FIELD_CREATE
+  CRM_FIELD_MANAGER_FIELD_AND_SECTION_EDIT
+  CRM_FIELD_MANAGER_FIELD_AND_SECTION_DELETE
+  CRM_AUTOMATION_CORE_ROUTE
+  CRM_AUTOMATION_CREATE
+  CRM_AUTOMATION_EDIT
+  CRM_AUTOMATION_DELETE
+  CRM_CONFIGURATIONS_ACCESS_PERMITS_CRM
+  CRM_PROCESS_TYPE_CORE_ROUTE
+  CRM_PROCESS_TYPE_CREATE
+  CRM_PROCESS_TYPE_EDIT
+  CRM_PROCESS_TYPE_DELETE
+  CRM_NEGOTIATION_CREATE
+  CRM_NEGOTIATION_EDIT
+  CRM_NEGOTIATION_DELETE
+  CRM_NEGOTIATION_PARENT_ACCESS
+  CRM_NEGOTIATION_PARENT_CHANGE
+  CRM_NEGOTIATION_PARENT_UNLINK
+  CRM_NEGOTIATION_EDIT_AMOUNTS
+  CRM_NEGOTIATION_GOAL_CREATE
+  CRM_NEGOTIATION_GOAL_EDIT
+  CRM_NEGOTIATION_GOAL_DELETE
+  CRM_NEGOTIATION_GOAL_ADD
+  CRM_NEGOTIATION_GOAL_CHANGE
+  CRM_NEGOTIATION_VIEW_GENERAL_INFORMATION
+  CRM_CUSTOMER_CREATE
+  CRM_CUSTOMER_EDIT
+  CRM_CUSTOMER_DELETE
+  CALENDAR_CORE_ROUTE
+  CALENDAR_ACTIVITY_CREATE
+  CALENDAR_ACTIVITY_EDIT
+  CALENDAR_ACTIVITY_DELETE
+  CALENDAR_VIEW_OTHER_USER
+  TASK_CORE_ROUTE
+  TASK_CHANGE_STATE
+  TASK_KANBAN_CORE_ROUTE
+  TASK_LIST_VIEW_CORE_ROUTE
+  TASK_KANBAN_VIEW_CORE_ROUTE
+  COMPANY_CORE_ROUTE
+  COMPANY_ORGANIZATION_ROUTE
+  COMPANY_DEPARTMENT_CREATE
+  COMPANY_DEPARTMENT_EDIT
+  COMPANY_DEPARTMENT_DELETE
+  COMPANY_EMPLOYEES_ROUTE
+  COMPANY_EMPLOYEE_CREATE
+  COMPANY_EMPLOYEE_EDIT
+  COMPANY_EMPLOYEE_DELETE
+  COMPANY_EMPLOYEE_INVITE_USER
+  COMPANY_EMPLOYEE_JOB_CREATE
+  COMPANY_EMPLOYEE_JOB_EDIT
+  COMPANY_EMPLOYEE_JOB_DELETE
+  COMPANY_REASSIGN_DATA
+  CHAT_CORE_ROUTE
+  CHAT_SELECT_EMOJI
+  CHAT_SELECT_FILE
+  CHAT_SEND_MESSAGE
+  MAIL_CORE_ROUTE
+  MAIL_INBOX_ROUTE
+  MAIL_COMPOSE_ROUTE
+  MAIL_DETAIL_ROUTE
+  FILES_CORE_ROUTE
+  FILES_CREATE_FILE
+  FILES_EDIT_FILE
+  FILES_DELETE_FILE
+  FILES_CREATE_FILE_ALL
+  FILES_EDIT_FILE_ALL
+  FILES_DELETE_FILE_ALL
+  FILES_VIEW_FILE
+  FILES_CREATE_FOLDER
+  FILES_EDIT_FOLDER
+  FILES_DELETE_FOLDER
+  FILES_CREATE_FOLDER_ALL
+  FILES_EDIT_FOLDER_ALL
+  FILES_DELETE_FOLDER_ALL
+  FILES_MOVE_FILE_AND_FOLDER
+  FILES_MOVE_FILE_AND_FOLDER_ALL
+  FORUM_CORE_ROUTE
+  FORUM_CREATE_ARTICLE
+  FORUM_EDIT_ARTICLE
+  FORUM_DELETE_ARTICLE
+  FORUM_EDIT_ARTICLE_ALL
+  FORUM_DELETE_ARTICLE_ALL
+  SURVEY_CORE_ROUTE
+  SURVEY_VIEW_FORM
+  SURVEY_CREATE_FORM
+  SURVEY_EDIT_FORM
+  SURVEY_DELETE_FORM
+  SURVEY_VIEW_ANSWERS
+  SURVEY_DELETE_ANSWER
+  SURVEY_PROCESS_ANSWER
+  ACCESS_CORE_ROUTE
+  ACCESS_CREATE
+  ACCESS_EDIT
+  ACCESS_DELETE
+  CONFIG_CORE_ROUTE
+  CONFIG_GENERAL
+  CONFIG_PROCESS_TYPE
+  CONFIG_GOALS
+  CONFIG_JOB_TITLE
+  CONFIG_CUSTOMER
+  CONFIG_CUSTOMER_DELETE
+  CONFIG_PAYMENT_AUTOMATION
+  CONFIG_PAYMENT_AUTOMATION_CREATE
+  CONFIG_PAYMENT_AUTOMATION_EDIT
+  CONFIG_PAYMENT_AUTOMATION_DELETE
+  CONFIG_DEPARTMENTS
+  CONFIG_DEPARTMENT_CREATE
+  CONFIG_DEPARTMENT_EDIT
+  CONFIG_DEPARTMENT_DELETE
+  CONFIG_NEGOTIATIONS
+  CONFIG_NEGOTIATION_CREATE
+  CONFIG_NEGOTIATION_EDIT
+  CONFIG_NEGOTIATION_DELETE
+  TICKETS_VIEW_ALL
+  ACADEMY_CORE_ROUTE
+  ACADEMY_COURSES_ROUTE
+  ACADEMY_WORKSHOPS_ROUTE
+  ACADEMY_ANSWERS_ROUTE
+  ACADEMY_ADMIN_ANSWERS_ROUTE
+  ACADEMY_ADMIN_ANSWERS_ALL_ROUTE
+  CORPORATE_MANAGEMENT_CORE
+  CORPORATE_MANAGEMENT_TIME
+  CORPORATE_MANAGEMENT_TIME_CREATE
+  CORPORATE_MANAGEMENT_TIME_EDIT
+  CORPORATE_MANAGEMENT_TIME_DELETE
+  CORPORATE_MANAGEMENT_MILESTONE
+  CORPORATE_MANAGEMENT_MILESTONE_CREATE
+  CORPORATE_MANAGEMENT_MILESTONE_EDIT
+  CORPORATE_MANAGEMENT_MILESTONE_DELETE
+  CORPORATE_MANAGEMENT_MILESTONE_VIEW_DETAILS
+  REQUEST_TEMPLATE_CORE_ROUTE
+  REQUEST_TEMPLATE_CREATE
+  REQUEST_TEMPLATE_EDIT
+  REQUEST_TEMPLATE_DELETE
+  REQUEST_CORE_ROUTE
+  REQUEST_CREATE
+  REQUEST_EDIT
+  REQUEST_DELETE
+  TAG_CORE_ROUTE
+  TAG_CREATE
+  TAG_EDIT
+  TAG_DELETE
+}
+
+enum EvolinciteTransactionType {
+  CREDIT_CARD
+  WIRE_TRANSFER
+  CASH
+  WEB_PAY
+  BANK_DEPOSIT
+  CORRESPONDENT_DEPOSIT
+}
+
+enum EvolinciteLogicOperator {
+  EXIST
+  NOT_EXIST
+  EQUAL
+  NOT_EQUAL
+  GREATER_THAN
+  SMALLER_THAN
+}
+
+enum EvolinciteExpenseStates {
+  PENDING
+  PAID
+  VALIDATE
+}
+
+enum EvolinciteFieldCore {
+  NAME
+  VALUE
+  OWNER
+}
+
+enum EvolinciteMunicipality {
+  CUCUTA
+  BUCARAMANGA
+  LETICIA
+  MEDELLIN
+  ARAUCA
+  BARRANQUILLA
+  BOGOTA
+  CARTAGENA
+  TUNJA
+  MANIZALES
+  FLORENCIA
+  YOPAL
+  POPAYAN
+  VALLEDUPAR
+  QUIBDO
+  MONTERIA
+  INIRIDA
+  SAN_JOSE_DEL_GUAVIARE
+  NEIVA
+  RIOACHA
+  SANTA_MARTA
+  VILLAVICENCIO
+  PASTO
+  MOCOA
+  ARMENIA
+  PEREIRA
+  SAN_ANDRES
+  SINCELEJO
+  IBAGUE
+  CALI
+  MITU
+  PUERTO_CARRENO
+}
+
+enum EvolinciteDocumentType {
+  CC
+  NIT
+}
+
+enum EvolinciteWalletPaymentStatus {
+  PAID
+  PENDING
+  VALIDATE
+  REVERTED
+}
+
+enum EvolinciteField {
+  STRING
+  NUMBER
+  SELECT_LIST
+  DOCUMENT
+  DATE
+}
+
+enum EvolinciteMessageType {
+  TEXT
+  IMG
+  FILE
+  VIDEO
+}
+
+enum EvolinciteRule {
+  MOVE
+  COPY
+  CHANGE_ATTRIBUTE
+  CREATE_PAYMENT
+  CREATE_EXPENSE
+  VALIDATE_FIELD
+  FROZEN_NEGOTIATION
+  ASSIGN_GOAL_INITIAL
+  ASSIGN_GOAL_FINAL
+  CREATE_NEGOTIATION
+  VALIDATE_TOTAL_TASKS
+  VALIDATE_TASK_STATE
+  VALIDATE_TASKS_SPECIFIC_STATE
+  SEND_PRE_MADE_EMAIL
+  SEND_CREATE_EMAIL
+  GENERATE_DOCUMENT
+  CONTROL_CRM_STATES
+  CONTROL_CRM_STATES_MOVE
+}
+
+enum EvolinciteStates {
+  INACTIVE
+  ACTIVE
+}
+
+enum EvolinciteApplication {
+  LEADS_UP
+  ACADEMY
+  LANDING
+}
+
+enum EvolinciteArticleStates {
+  INTERNAL
+  EXTERNAL
+}
+
+enum EvolinciteNotificationPriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum EvolinciteMailStates {
+  PENDING
+  SENT
+  REJECTED
+}
+
+enum EvolinciteSurveyAnswerState {
+  PROCESS
+  NO_PROCESS
+  NO_CRM
+}
+
+enum EvolunciteNotificationType {
+  GENERAL
+  NEGOTIATION
+  CHAT
+}
+
+enum EvolunciteMilestoneType {
+  AMOUNT
+  CLIENTS
+  PROCESSES
+  GOALS
+  TASKS
+}
+
+enum EvolunciteRequestType {
+  NEGOTIATION
+  PAY
+  EXPENSE
+  GENERAL
+}
+
+enum EvolinciteRequestPriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum EvolinciteRequestStatus {
+  ACCEPTED
+  REJECTED
+}
+
+type EvolinciteCompetence @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  content: AWSJSON
+  application: EvolinciteApplication
+  state: EvolinciteStates
+  EvolinciteSyllabus: EvolinciteSyllabus @hasOne
+}
+
+type EvolinciteCourse @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  durationUnit: String
+  duration: Int
+  objectives: [String]
+  application: EvolinciteApplication
+  state: EvolinciteStates
+  EvolinciteSyllabus: EvolinciteSyllabus @hasOne
+}
+
+type EvolinciteSyllabus @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  content: AWSJSON
+  application: EvolinciteApplication
+  state: EvolinciteStates
+  EvolinciteCompetence: EvolinciteCompetence @belongsTo
+}
+
+type EvolinciteUserAnswers @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  answers: AWSJSON
+  application: EvolinciteApplication
+  state: EvolinciteStates
+  EvolinciteUser: EvolinciteUser @hasOne
+  EvolinciteSyllabus: EvolinciteSyllabus @hasOne
+}
+
+type EvolinciteProcessType @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  order: Int
+  sellerCommission: Float
+  referrerCommission: Float
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiations: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteProcessType", fields: ["id"])
+}
+
+type EvolinciteExpenseType @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  type: EvolinciteField
+  setting: AWSJSON
+  state: EvolinciteStates
+  EvolinciteExpenses: [EvolinciteExpense]
+    @hasMany(indexName: "byEvolinciteExpenseType", fields: ["id"])
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+}
+
+type EvolinciteExpense @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  amount: Int
+  process: AWSJSON
+  expenseState: EvolinciteExpenseStates
+  expenseDate: AWSDate
+  observations: String
+  voucher: [String]
+  transactionType: EvolinciteTransactionType
+  reference: String
+  state: EvolinciteStates
+  evolinciteExpenseTypeID: ID @index(name: "byEvolinciteExpenseType")
+  EvolinciteExpenseType: EvolinciteExpenseType
+    @belongsTo(fields: ["evolinciteExpenseTypeID"])
+  evolinciteCrmNegotiationID: ID @index(name: "byEvolinciteCrmNegotiation")
+  EvolinciteCrmNegotiation: EvolinciteCrmNegotiation
+    @belongsTo(fields: ["evolinciteCrmNegotiationID"])
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteExpenseLogs: [EvolinciteExpenseLog]
+    @hasMany(indexName: "byEvolinciteExpense", fields: ["id"])
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteUserResponsibleID: ID
+    @index(name: "byEvolinciteUserResponsible", sortKeyFields: ["createdAt"])
+  EvolinciteUserResponsible: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserResponsibleID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteUserEvolinciteJobTitle @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  state: EvolinciteStates
+  evolinciteJobTitleID: ID @index(name: "byEvolinciteJobTitle")
+  EvolinciteJobTitle: EvolinciteJobTitle
+    @belongsTo(fields: ["evolinciteJobTitleID"])
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteJobTitle @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  salary: Int
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUserEvolinciteJobTitle: [EvolinciteUserEvolinciteJobTitle]
+    @hasMany(indexName: "byEvolinciteJobTitle", fields: ["id"])
+}
+
+type EvolinciteWalletPayment @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  amount: Int
+  scheduledDate: AWSDate
+  datePayment: AWSDate
+  paymentStatus: EvolinciteWalletPaymentStatus
+  prePayment: AWSJSON
+  postPayment: AWSJSON
+  observations: String
+  voucher: [String]
+  transactionType: EvolinciteTransactionType
+  reference: String
+  amountInterest: Int
+  amountCollection: Int
+  state: EvolinciteStates
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteUserReferrerID: ID @index(name: "byEvolinciteUserReferrer")
+  EvolinciteUserReferrer: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserReferrerID"])
+  evolinciteUserSellerID: ID @index(name: "byEvolinciteUserSeller")
+  EvolinciteUserSeller: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserSellerID"])
+  evolinciteCrmNegotiationID: ID @index(name: "byEvolinciteCrmNegotiation")
+  EvolinciteCrmNegotiation: EvolinciteCrmNegotiation
+    @belongsTo(fields: ["evolinciteCrmNegotiationID"])
+  evolinciteCustomerID: ID @index(name: "byEvolinciteCustomer")
+  EvolinciteCustomer: EvolinciteCustomer
+    @belongsTo(fields: ["evolinciteCustomerID"])
+  EvolinciteWalletPaymentLogs: [EvolinciteWalletPaymentLog]
+    @hasMany(indexName: "byEvolinciteWalletPayment", fields: ["id"])
+  evolinciteUserResponsibleID: ID
+    @index(name: "byEvolinciteUserResponsible", sortKeyFields: ["createdAt"])
+  EvolinciteUserResponsible: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserResponsibleID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteCrmNegotiationField @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  field: String
+  type: EvolinciteField
+  required: Boolean
+  order: Float
+  state: EvolinciteStates
+  meta: AWSJSON
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiationFieldValues: [EvolinciteCrmNegotiationFieldValue]
+    @hasMany(indexName: "byEvolinciteCrmNegotiationField", fields: ["id"])
+  evolinciteCrmNegotiationSectionID: ID
+    @index(name: "byEvolinciteCrmNegotiationSection")
+  EvolinciteCrmNegotiationSection: EvolinciteCrmNegotiationSection
+    @belongsTo(fields: ["evolinciteCrmNegotiationSectionID"])
+}
+
+type EvolinciteCrmNegotiationSection @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  order: Float
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiationFields: [EvolinciteCrmNegotiationField]
+    @hasMany(indexName: "byEvolinciteCrmNegotiationSection", fields: ["id"])
+}
+
+type EvolinciteCrmAutomation @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  rule: EvolinciteRule
+  setting: AWSJSON
+  order: Float
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteCrmStateID: ID
+    @index(name: "byEvolinciteCrmState", sortKeyFields: ["order"])
+  EvolinciteCrmState: EvolinciteCrmState
+    @belongsTo(fields: ["evolinciteCrmStateID"])
+}
+
+type EvolinciteComment @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  files: [String]
+  content: String
+  pinned: Boolean
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCrmNegotiationID: ID
+    @index(name: "byEvolinciteCrmNegotiation", sortKeyFields: ["createdAt"])
+  EvolinciteCrmNegotiation: EvolinciteCrmNegotiation
+    @belongsTo(fields: ["evolinciteCrmNegotiationID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteActivity @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  startDate: AWSDateTime
+  endDate: AWSDateTime
+  color: String
+  type: EvolinciteActivityTypes
+  priority: Int
+  meta: AWSJSON
+  taskState: EvolinciteTaskStates
+  documents: [String]
+  state: EvolinciteStates
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["endDate"])
+  EvolinciteUserOwner: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  Participants: [EvolinciteUser]
+    @manyToMany(relationName: "EvolinciteActivityEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteCrmNegotiationID: ID @index(name: "byEvolinciteCrmNegotiation")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiation: EvolinciteCrmNegotiation
+    @belongsTo(fields: ["evolinciteCrmNegotiationID"])
+}
+
+type EvolincitePermissions @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteDepartmentID: ID @index(name: "byEvolinciteDepartment")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteDepartment: EvolinciteDepartment
+    @belongsTo(fields: ["evolinciteDepartmentID"])
+  evolinciteRolID: ID @index(name: "byEvolinciteRol")
+  EvolinciteRol: EvolinciteRol @belongsTo(fields: ["evolinciteRolID"])
+}
+
+type EvolinciteDepartment @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  parent: ID
+  state: EvolinciteStates
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolincitePermissions: [EvolincitePermissions]
+    @hasMany(indexName: "byEvolinciteDepartment", fields: ["id"])
+  EvolinciteUserDepartments: [EvolinciteUserDepartment]
+    @hasMany(indexName: "byEvolinciteDepartment", fields: ["id"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteSubscription @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  price: Int
+  dateInitial: AWSDate
+  dateFinal: AWSDate
+  state: EvolinciteStates
+  EvolinciteCompanies: [EvolinciteCompany]
+    @hasMany(indexName: "byEvolinciteSubscription", fields: ["id"])
+}
+
+type EvolinciteModule @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  state: EvolinciteStates
+}
+
+type EvolinciteFunctionality @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  functionalities: [EvolinciteFunctionalities]
+  state: EvolinciteStates
+  evolincitePackageID: ID @index(name: "byEvolincitePackage")
+  EvolincitePackage: EvolincitePackage
+    @belongsTo(fields: ["evolincitePackageID"])
+}
+
+type EvolinciteRol @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  permissions: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolincitePermissions: [EvolincitePermissions]
+    @hasMany(indexName: "byEvolinciteRol", fields: ["id"])
+}
+
+type EvolinciteCustomer @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  lastName: String
+  documentType: EvolinciteDocumentType
+  documentNumber: String @index(name: "byDocumentNumber")
+  phone: AWSPhone
+  optionalPhone: String
+  email: AWSEmail
+  picture: String
+  birthDate: AWSDate
+  municipality: EvolinciteMunicipality
+  documents: [String]
+  address: String
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiations: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteCustomer", fields: ["id"])
+  EvolinciteWalletPayments: [EvolinciteWalletPayment]
+    @hasMany(indexName: "byEvolinciteCustomer", fields: ["id"])
+}
+
+type EvolinciteUserSettings @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  settings: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteCrmPipeline @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  publicDescription: String
+  order: Float
+  state: EvolinciteStates
+  meta: AWSJSON
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["order"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmStates: [EvolinciteCrmState]
+    @hasMany(indexName: "byEvolinciteCrmPipeline", fields: ["id"])
+}
+
+type EvolinciteCrmState @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  publicDescription: String
+  color: String
+  order: Float
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiations: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteCrmState", fields: ["id"])
+  EvolinciteCrmAutomations: [EvolinciteCrmAutomation]
+    @hasMany(indexName: "byEvolinciteCrmState", fields: ["id"])
+  evolinciteCrmPipelineID: ID
+    @index(name: "byEvolinciteCrmPipeline", sortKeyFields: ["order"])
+  EvolinciteCrmPipeline: EvolinciteCrmPipeline
+    @belongsTo(fields: ["evolinciteCrmPipelineID"])
+}
+
+type EvolinciteCrmNegotiationLog @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  log: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteCrmNegotiationID: ID
+    @index(name: "byEvolinciteCrmNegotiation", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteCrmNegotiation: EvolinciteCrmNegotiation
+    @belongsTo(fields: ["evolinciteCrmNegotiationID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteCrmNegotiation @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  value: Int
+  due: Int
+  parent: ID @index
+  date: AWSDate
+  documents: [String]
+  meta: AWSJSON
+  frozen: Boolean
+  valueInterest: Int
+  valueCollection: Int
+  observers: [ID]
+  exitDate: AWSDate
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteUserSellerID: ID @index(name: "byEvolinciteUserSeller")
+  EvolinciteUserSeller: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserSellerID"])
+  evolinciteUserReferrerID: ID @index(name: "byEvolinciteUserReferrer")
+  EvolinciteUserReferrer: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserReferrerID"])
+  evolinciteUserOwnerID: ID @index(name: "byEvolinciteUserOwner")
+  EvolinciteUserOwner: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserOwnerID"])
+  EvolinciteCrmNegotiationFieldValues: [EvolinciteCrmNegotiationFieldValue]
+    @hasMany(indexName: "byEvolinciteCrmNegotiation", fields: ["id"])
+  evolinciteCrmStateID: ID
+    @index(name: "byEvolinciteCrmState", sortKeyFields: ["createdAt"])
+  EvolinciteCrmState: EvolinciteCrmState
+    @belongsTo(fields: ["evolinciteCrmStateID"])
+  EvolinciteWalletPayments: [EvolinciteWalletPayment]
+    @hasMany(indexName: "byEvolinciteCrmNegotiation", fields: ["id"])
+  evolinciteCustomerID: ID @index(name: "byEvolinciteCustomer")
+  EvolinciteCustomer: EvolinciteCustomer
+    @belongsTo(fields: ["evolinciteCustomerID"])
+  EvolinciteCrmNegotiationLogs: [EvolinciteCrmNegotiationLog]
+    @hasMany(indexName: "byEvolinciteCrmNegotiation", fields: ["id"])
+  EvolinciteComments: [EvolinciteComment]
+    @hasMany(indexName: "byEvolinciteCrmNegotiation", fields: ["id"])
+  EvolinciteActivities: [EvolinciteActivity]
+    @hasMany(indexName: "byEvolinciteCrmNegotiation", fields: ["id"])
+  EvolinciteUsersObserver: [EvolinciteUser]
+    @manyToMany(relationName: "EvolinciteUserEvolinciteCrmNegotiation")
+  EvolinciteExpenses: [EvolinciteExpense]
+    @hasMany(indexName: "byEvolinciteCrmNegotiation", fields: ["id"])
+  evolinciteProcessTypeID: ID @index(name: "byEvolinciteProcessType")
+  EvolinciteProcessType: EvolinciteProcessType
+    @belongsTo(fields: ["evolinciteProcessTypeID"])
+  initialGoalID: ID @index(name: "byEvolinciteGoalInitial")
+  InitialGoal: EvolinciteGoal @belongsTo(fields: ["initialGoalID"])
+  finalGoalID: ID @index(name: "byEvolinciteGoalFinal")
+  FinalGoal: EvolinciteGoal @belongsTo(fields: ["finalGoalID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteRoom @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  Key: ID @index
+  name: String
+  state: EvolinciteStates
+  meta: AWSJSON
+  EvolinciteUsers: [EvolinciteUser]
+    @manyToMany(relationName: "EvolinciteRoomEvolinciteUser")
+  EvolinciteMessages: [EvolinciteMessage]
+    @hasMany(indexName: "byEvolinciteRoom", fields: ["id"])
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteMessage @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  content: String
+  type: EvolinciteMessageType
+  state: EvolinciteStates
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteRoomID: ID
+    @index(name: "byEvolinciteRoom", sortKeyFields: ["createdAt"])
+  EvolinciteRoom: EvolinciteRoom @belongsTo(fields: ["evolinciteRoomID"])
+}
+
+type EvolinciteCrmNegotiationFieldValue
+  @model
+  @auth(rules: [{ allow: public }]) {
+  id: ID!
+  value: String
+  state: EvolinciteStates
+  evolinciteCrmNegotiationFieldID: ID
+    @index(name: "byEvolinciteCrmNegotiationField")
+  EvolinciteCrmNegotiationField: EvolinciteCrmNegotiationField
+    @belongsTo(fields: ["evolinciteCrmNegotiationFieldID"])
+  evolinciteCrmNegotiationID: ID @index(name: "byEvolinciteCrmNegotiation")
+  EvolinciteCrmNegotiation: EvolinciteCrmNegotiation
+    @belongsTo(fields: ["evolinciteCrmNegotiationID"])
+}
+
+type EvolinciteEmail @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  from: String
+  to: String
+  content: String
+  subject: String
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteEmailTemplate @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  content: String
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteNotification @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  content: String
+  title: String
+  priority: EvolinciteNotificationPriority
+  type: EvolunciteNotificationType
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteUserDepartment @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteDepartmentID: ID @index(name: "byEvolinciteDepartment")
+  EvolinciteDepartment: EvolinciteDepartment
+    @belongsTo(fields: ["evolinciteDepartmentID"])
+}
+
+type EvolinciteUserEvolinciteCompany @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteUser @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  nit: String
+  phone: AWSPhone
+  picture: String
+  email: AWSEmail
+  sub: ID
+  meta: AWSJSON
+  cv: String
+  contract: String
+  memos: [String]
+  personalMail: String
+  personalPhone: String
+  state: EvolinciteStates
+  EvolinciteUserEvolinciteCompanies: [EvolinciteUserEvolinciteCompany]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteActivitiesOwner: [EvolinciteActivity]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteActivitiesParticipants: [EvolinciteActivity]
+    @manyToMany(relationName: "EvolinciteActivityEvolinciteUser")
+  EvolinciteRooms: [EvolinciteRoom]
+    @manyToMany(relationName: "EvolinciteRoomEvolinciteUser")
+  EvolinciteUserDepartments: [EvolinciteUserDepartment]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteCrmNegotiationsOwner: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteUserOwner", fields: ["id"])
+  EvolinciteCrmNegotiationsReferrer: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteUserReferrer", fields: ["id"])
+  EvolinciteCrmNegotiationsSeller: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteUserSeller", fields: ["id"])
+  EvolincitePaymentsUserSeller: [EvolinciteWalletPayment]
+    @hasMany(indexName: "byEvolinciteUserSeller", fields: ["id"])
+  EvolincitePaymentsUserReferrer: [EvolinciteWalletPayment]
+    @hasMany(indexName: "byEvolinciteUserReferrer", fields: ["id"])
+  EvolinciteNotifications: [EvolinciteNotification]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteMessages: [EvolinciteMessage]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteCrmNegotiationLogs: [EvolinciteCrmNegotiationLog]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteComments: [EvolinciteComment]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolincitePermissions: [EvolincitePermissions]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteUserSettings: [EvolinciteUserSettings]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteCrmNegotiationsObserver: [EvolinciteCrmNegotiation]
+    @manyToMany(relationName: "EvolinciteUserEvolinciteCrmNegotiation")
+  EvolinciteUserEvolinciteJobTitle: [EvolinciteUserEvolinciteJobTitle]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteWalletPaymentLogs: [EvolinciteWalletPaymentLog]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteExpenseLogs: [EvolinciteExpenseLog]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteExpenses: [EvolinciteExpense]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteTicket: [EvolinciteTicket]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteTicketLogs: [EvolinciteTicketLog]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteFiles: [EvolinciteFile]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteFolders: [EvolinciteFolder]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteArticles: [EvolinciteArticle]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteArticleComments: [EvolinciteArticleComment]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteFoldersOwner: [EvolinciteFolder]
+    @hasMany(indexName: "byEvolinciteUserOwner", fields: ["id"])
+  EvolinciteFormConfigurations: [EvolinciteFormConfiguration]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteFormAnswers: [EvolinciteFormAnswer]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteMails: [EvolinciteMail]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+  EvolinciteEmployeeObservations: [EvolinciteEmployeeObservation]
+    @hasMany(indexName: "byEvolinciteUser", fields: ["id"])
+}
+
+type EvolinciteCompany @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  nit: String @index(name: "byNit")
+  picture: String
+  meta: AWSJSON
+  state: EvolinciteStates
+  EvolinciteUserEvolinciteCompanies: [EvolinciteUserEvolinciteCompany]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  evolinciteSubscriptionID: ID @index(name: "byEvolinciteSubscription")
+  EvolinciteSubscription: EvolinciteSubscription
+    @belongsTo(fields: ["evolinciteSubscriptionID"])
+  EvolinciteWalletPayments: [EvolinciteWalletPayment]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmNegotiationFields: [EvolinciteCrmNegotiationField]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmNegotiationSections: [EvolinciteCrmNegotiationSection]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmAutomations: [EvolinciteCrmAutomation]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteUserDepartments: [EvolinciteUserDepartment]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteDepartments: [EvolinciteDepartment]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCustomers: [EvolinciteCustomer]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmPipelines: [EvolinciteCrmPipeline]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmStates: [EvolinciteCrmState]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmNegotiations: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteJobTitles: [EvolinciteJobTitle]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteNotifications: [EvolinciteNotification]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteEmailTemplates: [EvolinciteEmailTemplate]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteEmails: [EvolinciteEmail]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteMessages: [EvolinciteMessage]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCrmNegotiationLogs: [EvolinciteCrmNegotiationLog]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteActivities: [EvolinciteActivity]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolincitePermissions: [EvolincitePermissions]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteRoles: [EvolinciteRol]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteUserSettings: [EvolinciteUserSettings]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteRooms: [EvolinciteRoom]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteUserEvolinciteJobTitle: [EvolinciteUserEvolinciteJobTitle]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteExpenseTypes: [EvolinciteExpenseType]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteExpenses: [EvolinciteExpense]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteProcessTypes: [EvolinciteProcessType]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteGoal: [EvolinciteGoal]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteWalletPaymentLogs: [EvolinciteWalletPaymentLog]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteExpenseLogs: [EvolinciteExpenseLog]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteTicketOwner: [EvolinciteTicket]
+    @hasMany(indexName: "byEvolinciteCompanyOwner", fields: ["id"])
+  EvolinciteTicketOrigin: [EvolinciteTicket]
+    @hasMany(indexName: "byEvolinciteCompanyOrigin", fields: ["id"])
+  EvolinciteTicketLogs: [EvolinciteTicketLog]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteFiles: [EvolinciteFile]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteFolders: [EvolinciteFolder]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteArticles: [EvolinciteArticle]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteFormConfigurations: [EvolinciteFormConfiguration]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolincitePaymentAutomations: [EvolincitePaymentAutomation]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteMails: [EvolinciteMail]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteMailTemplates: [EvolinciteMailTemplate]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteCompanySubscriptions: [EvolinciteCompanySubscription]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteFormAnswers: [EvolinciteFormAnswer]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+  EvolinciteEmployeeObservations: [EvolinciteEmployeeObservation]
+    @hasMany(indexName: "byEvolinciteCompany", fields: ["id"])
+}
+
+type EvolinciteGoal @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteCrmNegotiationsInitial: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteGoalInitial", fields: ["id"])
+  EvolinciteCrmNegotiationsFinal: [EvolinciteCrmNegotiation]
+    @hasMany(indexName: "byEvolinciteGoalFinal", fields: ["id"])
+}
+
+type EvolinciteWalletPaymentLog @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  log: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteWalletPaymentID: ID
+    @index(name: "byEvolinciteWalletPayment", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteWalletPayment: EvolinciteWalletPayment
+    @belongsTo(fields: ["evolinciteWalletPaymentID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteExpenseLog @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  log: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteExpenseID: ID
+    @index(name: "byEvolinciteExpense", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteExpense: EvolinciteExpense
+    @belongsTo(fields: ["evolinciteExpenseID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteTicket @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  documents: [String]
+  meta: AWSJSON
+  ticketState: EvolinciteTicketState
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyOwnerID: ID @index(name: "byEvolinciteCompanyOwner")
+  evolinciteCompanyOriginID: ID @index(name: "byEvolinciteCompanyOrigin")
+  EvolinciteCompanyOwner: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyOwnerID"])
+  EvolinciteCompanyOrigin: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyOriginID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteTicketLogs: [EvolinciteTicketLog]
+    @hasMany(indexName: "byEvolinciteTicket", fields: ["id"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteTicketLog @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  log: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteTicketID: ID
+    @index(name: "byEvolinciteTicket", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteTicket: EvolinciteTicket @belongsTo(fields: ["evolinciteTicketID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteFile @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  size: Int
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteFolderID: ID
+    @index(name: "byEvolinciteFolder", sortKeyFields: ["updatedAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteFolder: EvolinciteFolder @belongsTo(fields: ["evolinciteFolderID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteFolder @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  parent: ID @index(name: "byParent")
+  name: String
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteUserOwnerID: ID @index(name: "byEvolinciteUserOwner")
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteUserOwner: EvolinciteUser
+    @belongsTo(fields: ["evolinciteUserOwnerID"])
+  EvolinciteFiles: [EvolinciteFile]
+    @hasMany(indexName: "byEvolinciteFolder", fields: ["id"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteArticle @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  front: String
+  cover: [String]
+  title: String
+  content: String
+  articleState: EvolinciteArticleStates
+  visibility: [String]
+  publicationDate: AWSDate
+  meta: AWSJSON
+  files: [String]
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteArticleComments: [EvolinciteArticleComment]
+    @hasMany(indexName: "byEvolinciteArticle", fields: ["id"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteArticleComment @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  content: String
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteArticleID: ID
+    @index(name: "byEvolinciteArticle", sortKeyFields: ["createdAt"])
+  EvolinciteArticle: EvolinciteArticle
+    @belongsTo(fields: ["evolinciteArticleID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteFormConfiguration @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  key: ID @index(name: "byKey")
+  name: String
+  config: AWSJSON
+  meta: AWSJSON
+  title: String
+  description: String
+  observations: String
+  front: String
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  EvolinciteFormAnswers: [EvolinciteFormAnswer]
+    @hasMany(indexName: "byEvolinciteFormConfiguration", fields: ["id"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteFormAnswer @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  meta: AWSJSON
+  answerState: EvolinciteSurveyAnswerState
+  state: EvolinciteStates
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  evolinciteFormConfigurationID: ID
+    @index(name: "byEvolinciteFormConfiguration", sortKeyFields: ["createdAt"])
+  EvolinciteFormConfiguration: EvolinciteFormConfiguration
+    @belongsTo(fields: ["evolinciteFormConfigurationID"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolincitePaymentAutomation @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  setting: AWSJSON
+  order: Float
+  repeat: Boolean
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteMail @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  destinations: [String]
+  subject: String
+  content: String
+  submissionStatus: EvolinciteMailStates
+  setting: AWSJSON
+  response: AWSJSON
+  files: [String]
+  state: EvolinciteStates
+  evolinciteCompanyID: ID
+    @index(name: "byEvolinciteCompany", sortKeyFields: ["createdAt"])
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteMailConfiguration @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  SMTP: String
+  email: String
+  password: String
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+}
+
+type EvolinciteMailTemplate @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  destinations: [String]
+  subject: String
+  content: String
+  files: [String]
+  transmitter: ID
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteMailTemplateLog @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  key: ID @index(name: "byKey")
+  log: AWSJSON
+  date: AWSDate
+  previousLog: ID
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID @index(name: "byEvolinciteUser")
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolincitePackage @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  goal: String
+  duration: Int
+  state: EvolinciteStates
+  EvolinciteFunctionalities: [EvolinciteFunctionality]
+    @hasMany(indexName: "byEvolincitePackage", fields: ["id"])
+  EvolinciteCompanySubscriptions: [EvolinciteCompanySubscription]
+    @hasMany(indexName: "byEvolincitePackage", fields: ["id"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteCompanySubscription @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  price: Int
+  dateInitial: AWSDate
+  dateFinal: AWSDate
+  activatorUser: ID
+  state: EvolinciteStates
+  evolincitePackageID: ID @index(name: "byEvolincitePackage")
+  EvolincitePackage: EvolincitePackage
+    @belongsTo(fields: ["evolincitePackageID"])
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+}
+
+type EvolinciteEmployeeObservation @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  content: String
+  isPublic: Boolean
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  EvolinciteCompany: EvolinciteCompany
+    @belongsTo(fields: ["evolinciteCompanyID"])
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  EvolinciteUser: EvolinciteUser @belongsTo(fields: ["evolinciteUserID"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteTag @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: ID @index(name: "byKey")
+  description: String
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteMilestone @model @auth(rules: [{ allow: public }]) {
+  name: String
+  description: String
+  tags: [ID]
+  type: EvolunciteMilestoneType
+  config: AWSJSON
+  startDate: AWSDateTime
+  endDate: AWSDateTime
+  employees: [ID]
+  managers: [ID]
+  isClosed: Boolean
+  closingNotes: String
+  log: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteUserLog @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  log: AWSJSON
+  functionality: EvolinciteFunctionalities
+  state: EvolinciteStates
+  key: ID @index(name: "byKey")
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteUserTimeTracking @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  time: Int
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteSchedule @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  config: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteTemplateRequest @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  description: String
+  tags: [ID]
+  questions: AWSJSON
+  elementType: EvolunciteRequestType
+  documents: [String]
+  meta: AWSJSON
+  owners: [ID]
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteRequest @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  templateID: ID @index(name: "byEvolinciteTemplate")
+  answers: AWSJSON
+  requester: ID @index(name: "byEvolinciteRequester")
+  priority: EvolinciteRequestPriority
+  elementID: [ID]
+  elementType: EvolunciteRequestType
+  status: EvolinciteRequestStatus
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}

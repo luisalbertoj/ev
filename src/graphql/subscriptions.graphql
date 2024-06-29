@@ -1,0 +1,10132 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateEvolinciteCompetence(
+  $filter: ModelSubscriptionEvolinciteCompetenceFilterInput
+) {
+  onCreateEvolinciteCompetence(filter: $filter) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCompetenceEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCompetence(
+  $filter: ModelSubscriptionEvolinciteCompetenceFilterInput
+) {
+  onUpdateEvolinciteCompetence(filter: $filter) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCompetenceEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCompetence(
+  $filter: ModelSubscriptionEvolinciteCompetenceFilterInput
+) {
+  onDeleteEvolinciteCompetence(filter: $filter) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCompetenceEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCourse(
+  $filter: ModelSubscriptionEvolinciteCourseFilterInput
+) {
+  onCreateEvolinciteCourse(filter: $filter) {
+    id
+    name
+    description
+    durationUnit
+    duration
+    objectives
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCourseEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCourse(
+  $filter: ModelSubscriptionEvolinciteCourseFilterInput
+) {
+  onUpdateEvolinciteCourse(filter: $filter) {
+    id
+    name
+    description
+    durationUnit
+    duration
+    objectives
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCourseEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCourse(
+  $filter: ModelSubscriptionEvolinciteCourseFilterInput
+) {
+  onDeleteEvolinciteCourse(filter: $filter) {
+    id
+    name
+    description
+    durationUnit
+    duration
+    objectives
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCourseEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteSyllabus(
+  $filter: ModelSubscriptionEvolinciteSyllabusFilterInput
+) {
+  onCreateEvolinciteSyllabus(filter: $filter) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteCompetence {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteCompetenceEvolinciteSyllabusId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteSyllabusEvolinciteCompetenceId
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteSyllabus(
+  $filter: ModelSubscriptionEvolinciteSyllabusFilterInput
+) {
+  onUpdateEvolinciteSyllabus(filter: $filter) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteCompetence {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteCompetenceEvolinciteSyllabusId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteSyllabusEvolinciteCompetenceId
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteSyllabus(
+  $filter: ModelSubscriptionEvolinciteSyllabusFilterInput
+) {
+  onDeleteEvolinciteSyllabus(filter: $filter) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteCompetence {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteCompetenceEvolinciteSyllabusId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteSyllabusEvolinciteCompetenceId
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserAnswers(
+  $filter: ModelSubscriptionEvolinciteUserAnswersFilterInput
+) {
+  onCreateEvolinciteUserAnswers(filter: $filter) {
+    id
+    answers
+    application
+    state
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteUserAnswersEvolinciteUserId
+    evolinciteUserAnswersEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserAnswers(
+  $filter: ModelSubscriptionEvolinciteUserAnswersFilterInput
+) {
+  onUpdateEvolinciteUserAnswers(filter: $filter) {
+    id
+    answers
+    application
+    state
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteUserAnswersEvolinciteUserId
+    evolinciteUserAnswersEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserAnswers(
+  $filter: ModelSubscriptionEvolinciteUserAnswersFilterInput
+) {
+  onDeleteEvolinciteUserAnswers(filter: $filter) {
+    id
+    answers
+    application
+    state
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteUserAnswersEvolinciteUserId
+    evolinciteUserAnswersEvolinciteSyllabusId
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteProcessType(
+  $filter: ModelSubscriptionEvolinciteProcessTypeFilterInput
+) {
+  onCreateEvolinciteProcessType(filter: $filter) {
+    id
+    name
+    order
+    sellerCommission
+    referrerCommission
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteProcessType(
+  $filter: ModelSubscriptionEvolinciteProcessTypeFilterInput
+) {
+  onUpdateEvolinciteProcessType(filter: $filter) {
+    id
+    name
+    order
+    sellerCommission
+    referrerCommission
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteProcessType(
+  $filter: ModelSubscriptionEvolinciteProcessTypeFilterInput
+) {
+  onDeleteEvolinciteProcessType(filter: $filter) {
+    id
+    name
+    order
+    sellerCommission
+    referrerCommission
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteExpenseType(
+  $filter: ModelSubscriptionEvolinciteExpenseTypeFilterInput
+) {
+  onCreateEvolinciteExpenseType(filter: $filter) {
+    id
+    name
+    type
+    setting
+    state
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteExpenseType(
+  $filter: ModelSubscriptionEvolinciteExpenseTypeFilterInput
+) {
+  onUpdateEvolinciteExpenseType(filter: $filter) {
+    id
+    name
+    type
+    setting
+    state
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteExpenseType(
+  $filter: ModelSubscriptionEvolinciteExpenseTypeFilterInput
+) {
+  onDeleteEvolinciteExpenseType(filter: $filter) {
+    id
+    name
+    type
+    setting
+    state
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteExpense(
+  $filter: ModelSubscriptionEvolinciteExpenseFilterInput
+) {
+  onCreateEvolinciteExpense(filter: $filter) {
+    id
+    amount
+    process
+    expenseState
+    expenseDate
+    observations
+    voucher
+    transactionType
+    reference
+    state
+    evolinciteExpenseTypeID
+    EvolinciteExpenseType {
+      id
+      name
+      type
+      setting
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteExpense(
+  $filter: ModelSubscriptionEvolinciteExpenseFilterInput
+) {
+  onUpdateEvolinciteExpense(filter: $filter) {
+    id
+    amount
+    process
+    expenseState
+    expenseDate
+    observations
+    voucher
+    transactionType
+    reference
+    state
+    evolinciteExpenseTypeID
+    EvolinciteExpenseType {
+      id
+      name
+      type
+      setting
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteExpense(
+  $filter: ModelSubscriptionEvolinciteExpenseFilterInput
+) {
+  onDeleteEvolinciteExpense(filter: $filter) {
+    id
+    amount
+    process
+    expenseState
+    expenseDate
+    observations
+    voucher
+    transactionType
+    reference
+    state
+    evolinciteExpenseTypeID
+    EvolinciteExpenseType {
+      id
+      name
+      type
+      setting
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserEvolinciteJobTitle(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteJobTitleFilterInput
+) {
+  onCreateEvolinciteUserEvolinciteJobTitle(filter: $filter) {
+    id
+    state
+    evolinciteJobTitleID
+    EvolinciteJobTitle {
+      id
+      name
+      salary
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserEvolinciteJobTitle(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteJobTitleFilterInput
+) {
+  onUpdateEvolinciteUserEvolinciteJobTitle(filter: $filter) {
+    id
+    state
+    evolinciteJobTitleID
+    EvolinciteJobTitle {
+      id
+      name
+      salary
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserEvolinciteJobTitle(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteJobTitleFilterInput
+) {
+  onDeleteEvolinciteUserEvolinciteJobTitle(filter: $filter) {
+    id
+    state
+    evolinciteJobTitleID
+    EvolinciteJobTitle {
+      id
+      name
+      salary
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteJobTitle(
+  $filter: ModelSubscriptionEvolinciteJobTitleFilterInput
+) {
+  onCreateEvolinciteJobTitle(filter: $filter) {
+    id
+    name
+    salary
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteJobTitle(
+  $filter: ModelSubscriptionEvolinciteJobTitleFilterInput
+) {
+  onUpdateEvolinciteJobTitle(filter: $filter) {
+    id
+    name
+    salary
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteJobTitle(
+  $filter: ModelSubscriptionEvolinciteJobTitleFilterInput
+) {
+  onDeleteEvolinciteJobTitle(filter: $filter) {
+    id
+    name
+    salary
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteWalletPayment(
+  $filter: ModelSubscriptionEvolinciteWalletPaymentFilterInput
+) {
+  onCreateEvolinciteWalletPayment(filter: $filter) {
+    id
+    amount
+    scheduledDate
+    datePayment
+    paymentStatus
+    prePayment
+    postPayment
+    observations
+    voucher
+    transactionType
+    reference
+    amountInterest
+    amountCollection
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteWalletPayment(
+  $filter: ModelSubscriptionEvolinciteWalletPaymentFilterInput
+) {
+  onUpdateEvolinciteWalletPayment(filter: $filter) {
+    id
+    amount
+    scheduledDate
+    datePayment
+    paymentStatus
+    prePayment
+    postPayment
+    observations
+    voucher
+    transactionType
+    reference
+    amountInterest
+    amountCollection
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteWalletPayment(
+  $filter: ModelSubscriptionEvolinciteWalletPaymentFilterInput
+) {
+  onDeleteEvolinciteWalletPayment(filter: $filter) {
+    id
+    amount
+    scheduledDate
+    datePayment
+    paymentStatus
+    prePayment
+    postPayment
+    observations
+    voucher
+    transactionType
+    reference
+    amountInterest
+    amountCollection
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmNegotiationField(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFieldFilterInput
+) {
+  onCreateEvolinciteCrmNegotiationField(filter: $filter) {
+    id
+    field
+    type
+    required
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmNegotiationSectionID
+    EvolinciteCrmNegotiationSection {
+      id
+      name
+      order
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmNegotiationField(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFieldFilterInput
+) {
+  onUpdateEvolinciteCrmNegotiationField(filter: $filter) {
+    id
+    field
+    type
+    required
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmNegotiationSectionID
+    EvolinciteCrmNegotiationSection {
+      id
+      name
+      order
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmNegotiationField(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFieldFilterInput
+) {
+  onDeleteEvolinciteCrmNegotiationField(filter: $filter) {
+    id
+    field
+    type
+    required
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmNegotiationSectionID
+    EvolinciteCrmNegotiationSection {
+      id
+      name
+      order
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmNegotiationSection(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationSectionFilterInput
+) {
+  onCreateEvolinciteCrmNegotiationSection(filter: $filter) {
+    id
+    name
+    order
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmNegotiationSection(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationSectionFilterInput
+) {
+  onUpdateEvolinciteCrmNegotiationSection(filter: $filter) {
+    id
+    name
+    order
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmNegotiationSection(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationSectionFilterInput
+) {
+  onDeleteEvolinciteCrmNegotiationSection(filter: $filter) {
+    id
+    name
+    order
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmAutomation(
+  $filter: ModelSubscriptionEvolinciteCrmAutomationFilterInput
+) {
+  onCreateEvolinciteCrmAutomation(filter: $filter) {
+    id
+    name
+    rule
+    setting
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmAutomation(
+  $filter: ModelSubscriptionEvolinciteCrmAutomationFilterInput
+) {
+  onUpdateEvolinciteCrmAutomation(filter: $filter) {
+    id
+    name
+    rule
+    setting
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmAutomation(
+  $filter: ModelSubscriptionEvolinciteCrmAutomationFilterInput
+) {
+  onDeleteEvolinciteCrmAutomation(filter: $filter) {
+    id
+    name
+    rule
+    setting
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteComment(
+  $filter: ModelSubscriptionEvolinciteCommentFilterInput
+) {
+  onCreateEvolinciteComment(filter: $filter) {
+    id
+    files
+    content
+    pinned
+    state
+    evolinciteUserID
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteComment(
+  $filter: ModelSubscriptionEvolinciteCommentFilterInput
+) {
+  onUpdateEvolinciteComment(filter: $filter) {
+    id
+    files
+    content
+    pinned
+    state
+    evolinciteUserID
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteComment(
+  $filter: ModelSubscriptionEvolinciteCommentFilterInput
+) {
+  onDeleteEvolinciteComment(filter: $filter) {
+    id
+    files
+    content
+    pinned
+    state
+    evolinciteUserID
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteActivity(
+  $filter: ModelSubscriptionEvolinciteActivityFilterInput
+) {
+  onCreateEvolinciteActivity(filter: $filter) {
+    id
+    name
+    description
+    startDate
+    endDate
+    color
+    type
+    priority
+    meta
+    taskState
+    documents
+    state
+    evolinciteUserID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    Participants {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteActivity(
+  $filter: ModelSubscriptionEvolinciteActivityFilterInput
+) {
+  onUpdateEvolinciteActivity(filter: $filter) {
+    id
+    name
+    description
+    startDate
+    endDate
+    color
+    type
+    priority
+    meta
+    taskState
+    documents
+    state
+    evolinciteUserID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    Participants {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteActivity(
+  $filter: ModelSubscriptionEvolinciteActivityFilterInput
+) {
+  onDeleteEvolinciteActivity(filter: $filter) {
+    id
+    name
+    description
+    startDate
+    endDate
+    color
+    type
+    priority
+    meta
+    taskState
+    documents
+    state
+    evolinciteUserID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    Participants {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolincitePermissions(
+  $filter: ModelSubscriptionEvolincitePermissionsFilterInput
+) {
+  onCreateEvolincitePermissions(filter: $filter) {
+    id
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    evolinciteDepartmentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRolID
+    EvolinciteRol {
+      id
+      name
+      permissions
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolincitePermissions(
+  $filter: ModelSubscriptionEvolincitePermissionsFilterInput
+) {
+  onUpdateEvolincitePermissions(filter: $filter) {
+    id
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    evolinciteDepartmentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRolID
+    EvolinciteRol {
+      id
+      name
+      permissions
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolincitePermissions(
+  $filter: ModelSubscriptionEvolincitePermissionsFilterInput
+) {
+  onDeleteEvolincitePermissions(filter: $filter) {
+    id
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    evolinciteDepartmentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRolID
+    EvolinciteRol {
+      id
+      name
+      permissions
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteDepartment(
+  $filter: ModelSubscriptionEvolinciteDepartmentFilterInput
+) {
+  onCreateEvolinciteDepartment(filter: $filter) {
+    id
+    name
+    parent
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteDepartment(
+  $filter: ModelSubscriptionEvolinciteDepartmentFilterInput
+) {
+  onUpdateEvolinciteDepartment(filter: $filter) {
+    id
+    name
+    parent
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteDepartment(
+  $filter: ModelSubscriptionEvolinciteDepartmentFilterInput
+) {
+  onDeleteEvolinciteDepartment(filter: $filter) {
+    id
+    name
+    parent
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteSubscription(
+  $filter: ModelSubscriptionEvolinciteSubscriptionFilterInput
+) {
+  onCreateEvolinciteSubscription(filter: $filter) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    state
+    EvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteSubscription(
+  $filter: ModelSubscriptionEvolinciteSubscriptionFilterInput
+) {
+  onUpdateEvolinciteSubscription(filter: $filter) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    state
+    EvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteSubscription(
+  $filter: ModelSubscriptionEvolinciteSubscriptionFilterInput
+) {
+  onDeleteEvolinciteSubscription(filter: $filter) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    state
+    EvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteModule(
+  $filter: ModelSubscriptionEvolinciteModuleFilterInput
+) {
+  onCreateEvolinciteModule(filter: $filter) {
+    id
+    name
+    state
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteModule(
+  $filter: ModelSubscriptionEvolinciteModuleFilterInput
+) {
+  onUpdateEvolinciteModule(filter: $filter) {
+    id
+    name
+    state
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteModule(
+  $filter: ModelSubscriptionEvolinciteModuleFilterInput
+) {
+  onDeleteEvolinciteModule(filter: $filter) {
+    id
+    name
+    state
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteFunctionality(
+  $filter: ModelSubscriptionEvolinciteFunctionalityFilterInput
+) {
+  onCreateEvolinciteFunctionality(filter: $filter) {
+    id
+    name
+    functionalities
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteFunctionality(
+  $filter: ModelSubscriptionEvolinciteFunctionalityFilterInput
+) {
+  onUpdateEvolinciteFunctionality(filter: $filter) {
+    id
+    name
+    functionalities
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteFunctionality(
+  $filter: ModelSubscriptionEvolinciteFunctionalityFilterInput
+) {
+  onDeleteEvolinciteFunctionality(filter: $filter) {
+    id
+    name
+    functionalities
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteRol(
+  $filter: ModelSubscriptionEvolinciteRolFilterInput
+) {
+  onCreateEvolinciteRol(filter: $filter) {
+    id
+    name
+    permissions
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteRol(
+  $filter: ModelSubscriptionEvolinciteRolFilterInput
+) {
+  onUpdateEvolinciteRol(filter: $filter) {
+    id
+    name
+    permissions
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteRol(
+  $filter: ModelSubscriptionEvolinciteRolFilterInput
+) {
+  onDeleteEvolinciteRol(filter: $filter) {
+    id
+    name
+    permissions
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCustomer(
+  $filter: ModelSubscriptionEvolinciteCustomerFilterInput
+) {
+  onCreateEvolinciteCustomer(filter: $filter) {
+    id
+    name
+    lastName
+    documentType
+    documentNumber
+    phone
+    optionalPhone
+    email
+    picture
+    birthDate
+    municipality
+    documents
+    address
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCustomer(
+  $filter: ModelSubscriptionEvolinciteCustomerFilterInput
+) {
+  onUpdateEvolinciteCustomer(filter: $filter) {
+    id
+    name
+    lastName
+    documentType
+    documentNumber
+    phone
+    optionalPhone
+    email
+    picture
+    birthDate
+    municipality
+    documents
+    address
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCustomer(
+  $filter: ModelSubscriptionEvolinciteCustomerFilterInput
+) {
+  onDeleteEvolinciteCustomer(filter: $filter) {
+    id
+    name
+    lastName
+    documentType
+    documentNumber
+    phone
+    optionalPhone
+    email
+    picture
+    birthDate
+    municipality
+    documents
+    address
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserSettings(
+  $filter: ModelSubscriptionEvolinciteUserSettingsFilterInput
+) {
+  onCreateEvolinciteUserSettings(filter: $filter) {
+    id
+    settings
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserSettings(
+  $filter: ModelSubscriptionEvolinciteUserSettingsFilterInput
+) {
+  onUpdateEvolinciteUserSettings(filter: $filter) {
+    id
+    settings
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserSettings(
+  $filter: ModelSubscriptionEvolinciteUserSettingsFilterInput
+) {
+  onDeleteEvolinciteUserSettings(filter: $filter) {
+    id
+    settings
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmPipeline(
+  $filter: ModelSubscriptionEvolinciteCrmPipelineFilterInput
+) {
+  onCreateEvolinciteCrmPipeline(filter: $filter) {
+    id
+    name
+    description
+    publicDescription
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmPipeline(
+  $filter: ModelSubscriptionEvolinciteCrmPipelineFilterInput
+) {
+  onUpdateEvolinciteCrmPipeline(filter: $filter) {
+    id
+    name
+    description
+    publicDescription
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmPipeline(
+  $filter: ModelSubscriptionEvolinciteCrmPipelineFilterInput
+) {
+  onDeleteEvolinciteCrmPipeline(filter: $filter) {
+    id
+    name
+    description
+    publicDescription
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmState(
+  $filter: ModelSubscriptionEvolinciteCrmStateFilterInput
+) {
+  onCreateEvolinciteCrmState(filter: $filter) {
+    id
+    name
+    description
+    publicDescription
+    color
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    evolinciteCrmPipelineID
+    EvolinciteCrmPipeline {
+      id
+      name
+      description
+      publicDescription
+      order
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmState(
+  $filter: ModelSubscriptionEvolinciteCrmStateFilterInput
+) {
+  onUpdateEvolinciteCrmState(filter: $filter) {
+    id
+    name
+    description
+    publicDescription
+    color
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    evolinciteCrmPipelineID
+    EvolinciteCrmPipeline {
+      id
+      name
+      description
+      publicDescription
+      order
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmState(
+  $filter: ModelSubscriptionEvolinciteCrmStateFilterInput
+) {
+  onDeleteEvolinciteCrmState(filter: $filter) {
+    id
+    name
+    description
+    publicDescription
+    color
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    evolinciteCrmPipelineID
+    EvolinciteCrmPipeline {
+      id
+      name
+      description
+      publicDescription
+      order
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmNegotiationLog(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationLogFilterInput
+) {
+  onCreateEvolinciteCrmNegotiationLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmNegotiationLog(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationLogFilterInput
+) {
+  onUpdateEvolinciteCrmNegotiationLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmNegotiationLog(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationLogFilterInput
+) {
+  onDeleteEvolinciteCrmNegotiationLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmNegotiation(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFilterInput
+) {
+  onCreateEvolinciteCrmNegotiation(filter: $filter) {
+    id
+    name
+    value
+    due
+    parent
+    date
+    documents
+    meta
+    frozen
+    valueInterest
+    valueCollection
+    observers
+    exitDate
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserOwnerID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolinciteUsersObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteProcessTypeID
+    EvolinciteProcessType {
+      id
+      name
+      order
+      sellerCommission
+      referrerCommission
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    initialGoalID
+    InitialGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    finalGoalID
+    FinalGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmNegotiation(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFilterInput
+) {
+  onUpdateEvolinciteCrmNegotiation(filter: $filter) {
+    id
+    name
+    value
+    due
+    parent
+    date
+    documents
+    meta
+    frozen
+    valueInterest
+    valueCollection
+    observers
+    exitDate
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserOwnerID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolinciteUsersObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteProcessTypeID
+    EvolinciteProcessType {
+      id
+      name
+      order
+      sellerCommission
+      referrerCommission
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    initialGoalID
+    InitialGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    finalGoalID
+    FinalGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmNegotiation(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFilterInput
+) {
+  onDeleteEvolinciteCrmNegotiation(filter: $filter) {
+    id
+    name
+    value
+    due
+    parent
+    date
+    documents
+    meta
+    frozen
+    valueInterest
+    valueCollection
+    observers
+    exitDate
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserOwnerID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolinciteUsersObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteProcessTypeID
+    EvolinciteProcessType {
+      id
+      name
+      order
+      sellerCommission
+      referrerCommission
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    initialGoalID
+    InitialGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    finalGoalID
+    FinalGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteRoom(
+  $filter: ModelSubscriptionEvolinciteRoomFilterInput
+) {
+  onCreateEvolinciteRoom(filter: $filter) {
+    id
+    Key
+    name
+    state
+    meta
+    EvolinciteUsers {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteRoom(
+  $filter: ModelSubscriptionEvolinciteRoomFilterInput
+) {
+  onUpdateEvolinciteRoom(filter: $filter) {
+    id
+    Key
+    name
+    state
+    meta
+    EvolinciteUsers {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteRoom(
+  $filter: ModelSubscriptionEvolinciteRoomFilterInput
+) {
+  onDeleteEvolinciteRoom(filter: $filter) {
+    id
+    Key
+    name
+    state
+    meta
+    EvolinciteUsers {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteMessage(
+  $filter: ModelSubscriptionEvolinciteMessageFilterInput
+) {
+  onCreateEvolinciteMessage(filter: $filter) {
+    id
+    content
+    type
+    state
+    createdAt
+    updatedAt
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRoomID
+    EvolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteMessage(
+  $filter: ModelSubscriptionEvolinciteMessageFilterInput
+) {
+  onUpdateEvolinciteMessage(filter: $filter) {
+    id
+    content
+    type
+    state
+    createdAt
+    updatedAt
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRoomID
+    EvolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteMessage(
+  $filter: ModelSubscriptionEvolinciteMessageFilterInput
+) {
+  onDeleteEvolinciteMessage(filter: $filter) {
+    id
+    content
+    type
+    state
+    createdAt
+    updatedAt
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRoomID
+    EvolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCrmNegotiationFieldValue(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFieldValueFilterInput
+) {
+  onCreateEvolinciteCrmNegotiationFieldValue(filter: $filter) {
+    id
+    value
+    state
+    evolinciteCrmNegotiationFieldID
+    EvolinciteCrmNegotiationField {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCrmNegotiationFieldValue(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFieldValueFilterInput
+) {
+  onUpdateEvolinciteCrmNegotiationFieldValue(filter: $filter) {
+    id
+    value
+    state
+    evolinciteCrmNegotiationFieldID
+    EvolinciteCrmNegotiationField {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCrmNegotiationFieldValue(
+  $filter: ModelSubscriptionEvolinciteCrmNegotiationFieldValueFilterInput
+) {
+  onDeleteEvolinciteCrmNegotiationFieldValue(filter: $filter) {
+    id
+    value
+    state
+    evolinciteCrmNegotiationFieldID
+    EvolinciteCrmNegotiationField {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteEmail(
+  $filter: ModelSubscriptionEvolinciteEmailFilterInput
+) {
+  onCreateEvolinciteEmail(filter: $filter) {
+    id
+    from
+    to
+    content
+    subject
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteEmail(
+  $filter: ModelSubscriptionEvolinciteEmailFilterInput
+) {
+  onUpdateEvolinciteEmail(filter: $filter) {
+    id
+    from
+    to
+    content
+    subject
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteEmail(
+  $filter: ModelSubscriptionEvolinciteEmailFilterInput
+) {
+  onDeleteEvolinciteEmail(filter: $filter) {
+    id
+    from
+    to
+    content
+    subject
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteEmailTemplate(
+  $filter: ModelSubscriptionEvolinciteEmailTemplateFilterInput
+) {
+  onCreateEvolinciteEmailTemplate(filter: $filter) {
+    id
+    content
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteEmailTemplate(
+  $filter: ModelSubscriptionEvolinciteEmailTemplateFilterInput
+) {
+  onUpdateEvolinciteEmailTemplate(filter: $filter) {
+    id
+    content
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteEmailTemplate(
+  $filter: ModelSubscriptionEvolinciteEmailTemplateFilterInput
+) {
+  onDeleteEvolinciteEmailTemplate(filter: $filter) {
+    id
+    content
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteNotification(
+  $filter: ModelSubscriptionEvolinciteNotificationFilterInput
+) {
+  onCreateEvolinciteNotification(filter: $filter) {
+    id
+    content
+    title
+    priority
+    type
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteNotification(
+  $filter: ModelSubscriptionEvolinciteNotificationFilterInput
+) {
+  onUpdateEvolinciteNotification(filter: $filter) {
+    id
+    content
+    title
+    priority
+    type
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteNotification(
+  $filter: ModelSubscriptionEvolinciteNotificationFilterInput
+) {
+  onDeleteEvolinciteNotification(filter: $filter) {
+    id
+    content
+    title
+    priority
+    type
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserDepartment(
+  $filter: ModelSubscriptionEvolinciteUserDepartmentFilterInput
+) {
+  onCreateEvolinciteUserDepartment(filter: $filter) {
+    id
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteDepartmentID
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserDepartment(
+  $filter: ModelSubscriptionEvolinciteUserDepartmentFilterInput
+) {
+  onUpdateEvolinciteUserDepartment(filter: $filter) {
+    id
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteDepartmentID
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserDepartment(
+  $filter: ModelSubscriptionEvolinciteUserDepartmentFilterInput
+) {
+  onDeleteEvolinciteUserDepartment(filter: $filter) {
+    id
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteDepartmentID
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserEvolinciteCompany(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteCompanyFilterInput
+) {
+  onCreateEvolinciteUserEvolinciteCompany(filter: $filter) {
+    id
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserEvolinciteCompany(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteCompanyFilterInput
+) {
+  onUpdateEvolinciteUserEvolinciteCompany(filter: $filter) {
+    id
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserEvolinciteCompany(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteCompanyFilterInput
+) {
+  onDeleteEvolinciteUserEvolinciteCompany(filter: $filter) {
+    id
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteUserFilterInput
+) {
+  onCreateEvolinciteUser(filter: $filter) {
+    id
+    name
+    nit
+    phone
+    picture
+    email
+    sub
+    meta
+    cv
+    contract
+    memos
+    personalMail
+    personalPhone
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesParticipants {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteTicket {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    EvolinciteFoldersOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteUserFilterInput
+) {
+  onUpdateEvolinciteUser(filter: $filter) {
+    id
+    name
+    nit
+    phone
+    picture
+    email
+    sub
+    meta
+    cv
+    contract
+    memos
+    personalMail
+    personalPhone
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesParticipants {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteTicket {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    EvolinciteFoldersOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteUserFilterInput
+) {
+  onDeleteEvolinciteUser(filter: $filter) {
+    id
+    name
+    nit
+    phone
+    picture
+    email
+    sub
+    meta
+    cv
+    contract
+    memos
+    personalMail
+    personalPhone
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesParticipants {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteTicket {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    EvolinciteFoldersOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCompany(
+  $filter: ModelSubscriptionEvolinciteCompanyFilterInput
+) {
+  onCreateEvolinciteCompany(filter: $filter) {
+    id
+    name
+    nit
+    picture
+    meta
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    evolinciteSubscriptionID
+    EvolinciteSubscription {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationSections {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCustomers {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmPipelines {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteJobTitles {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteEmailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteEmails {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteRoles {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteProcessTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteGoal {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOrigin {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteMailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCompany(
+  $filter: ModelSubscriptionEvolinciteCompanyFilterInput
+) {
+  onUpdateEvolinciteCompany(filter: $filter) {
+    id
+    name
+    nit
+    picture
+    meta
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    evolinciteSubscriptionID
+    EvolinciteSubscription {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationSections {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCustomers {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmPipelines {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteJobTitles {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteEmailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteEmails {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteRoles {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteProcessTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteGoal {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOrigin {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteMailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCompany(
+  $filter: ModelSubscriptionEvolinciteCompanyFilterInput
+) {
+  onDeleteEvolinciteCompany(filter: $filter) {
+    id
+    name
+    nit
+    picture
+    meta
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    evolinciteSubscriptionID
+    EvolinciteSubscription {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationSections {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCustomers {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmPipelines {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteJobTitles {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteEmailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteEmails {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteRoles {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteProcessTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteGoal {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOrigin {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteMailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteGoal(
+  $filter: ModelSubscriptionEvolinciteGoalFilterInput
+) {
+  onCreateEvolinciteGoal(filter: $filter) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationsInitial {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsFinal {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteGoal(
+  $filter: ModelSubscriptionEvolinciteGoalFilterInput
+) {
+  onUpdateEvolinciteGoal(filter: $filter) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationsInitial {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsFinal {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteGoal(
+  $filter: ModelSubscriptionEvolinciteGoalFilterInput
+) {
+  onDeleteEvolinciteGoal(filter: $filter) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationsInitial {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsFinal {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteWalletPaymentLog(
+  $filter: ModelSubscriptionEvolinciteWalletPaymentLogFilterInput
+) {
+  onCreateEvolinciteWalletPaymentLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteWalletPaymentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayment {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteWalletPaymentLog(
+  $filter: ModelSubscriptionEvolinciteWalletPaymentLogFilterInput
+) {
+  onUpdateEvolinciteWalletPaymentLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteWalletPaymentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayment {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteWalletPaymentLog(
+  $filter: ModelSubscriptionEvolinciteWalletPaymentLogFilterInput
+) {
+  onDeleteEvolinciteWalletPaymentLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteWalletPaymentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayment {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteExpenseLog(
+  $filter: ModelSubscriptionEvolinciteExpenseLogFilterInput
+) {
+  onCreateEvolinciteExpenseLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteExpenseID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteExpense {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteExpenseLog(
+  $filter: ModelSubscriptionEvolinciteExpenseLogFilterInput
+) {
+  onUpdateEvolinciteExpenseLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteExpenseID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteExpense {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteExpenseLog(
+  $filter: ModelSubscriptionEvolinciteExpenseLogFilterInput
+) {
+  onDeleteEvolinciteExpenseLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteExpenseID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteExpense {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteTicket(
+  $filter: ModelSubscriptionEvolinciteTicketFilterInput
+) {
+  onCreateEvolinciteTicket(filter: $filter) {
+    id
+    name
+    description
+    documents
+    meta
+    ticketState
+    state
+    evolinciteUserID
+    evolinciteCompanyOwnerID
+    evolinciteCompanyOriginID
+    EvolinciteCompanyOwner {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompanyOrigin {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteTicket(
+  $filter: ModelSubscriptionEvolinciteTicketFilterInput
+) {
+  onUpdateEvolinciteTicket(filter: $filter) {
+    id
+    name
+    description
+    documents
+    meta
+    ticketState
+    state
+    evolinciteUserID
+    evolinciteCompanyOwnerID
+    evolinciteCompanyOriginID
+    EvolinciteCompanyOwner {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompanyOrigin {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteTicket(
+  $filter: ModelSubscriptionEvolinciteTicketFilterInput
+) {
+  onDeleteEvolinciteTicket(filter: $filter) {
+    id
+    name
+    description
+    documents
+    meta
+    ticketState
+    state
+    evolinciteUserID
+    evolinciteCompanyOwnerID
+    evolinciteCompanyOriginID
+    EvolinciteCompanyOwner {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompanyOrigin {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteTicketLog(
+  $filter: ModelSubscriptionEvolinciteTicketLogFilterInput
+) {
+  onCreateEvolinciteTicketLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteTicketID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicket {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteTicketLog(
+  $filter: ModelSubscriptionEvolinciteTicketLogFilterInput
+) {
+  onUpdateEvolinciteTicketLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteTicketID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicket {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteTicketLog(
+  $filter: ModelSubscriptionEvolinciteTicketLogFilterInput
+) {
+  onDeleteEvolinciteTicketLog(filter: $filter) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteTicketID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicket {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteFile(
+  $filter: ModelSubscriptionEvolinciteFileFilterInput
+) {
+  onCreateEvolinciteFile(filter: $filter) {
+    id
+    name
+    size
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteFolderID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFolder {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteFile(
+  $filter: ModelSubscriptionEvolinciteFileFilterInput
+) {
+  onUpdateEvolinciteFile(filter: $filter) {
+    id
+    name
+    size
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteFolderID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFolder {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteFile(
+  $filter: ModelSubscriptionEvolinciteFileFilterInput
+) {
+  onDeleteEvolinciteFile(filter: $filter) {
+    id
+    name
+    size
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteFolderID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFolder {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteFolder(
+  $filter: ModelSubscriptionEvolinciteFolderFilterInput
+) {
+  onCreateEvolinciteFolder(filter: $filter) {
+    id
+    parent
+    name
+    meta
+    state
+    evolinciteUserID
+    evolinciteUserOwnerID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteFolder(
+  $filter: ModelSubscriptionEvolinciteFolderFilterInput
+) {
+  onUpdateEvolinciteFolder(filter: $filter) {
+    id
+    parent
+    name
+    meta
+    state
+    evolinciteUserID
+    evolinciteUserOwnerID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteFolder(
+  $filter: ModelSubscriptionEvolinciteFolderFilterInput
+) {
+  onDeleteEvolinciteFolder(filter: $filter) {
+    id
+    parent
+    name
+    meta
+    state
+    evolinciteUserID
+    evolinciteUserOwnerID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteArticle(
+  $filter: ModelSubscriptionEvolinciteArticleFilterInput
+) {
+  onCreateEvolinciteArticle(filter: $filter) {
+    id
+    front
+    cover
+    title
+    content
+    articleState
+    visibility
+    publicationDate
+    meta
+    files
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteArticle(
+  $filter: ModelSubscriptionEvolinciteArticleFilterInput
+) {
+  onUpdateEvolinciteArticle(filter: $filter) {
+    id
+    front
+    cover
+    title
+    content
+    articleState
+    visibility
+    publicationDate
+    meta
+    files
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteArticle(
+  $filter: ModelSubscriptionEvolinciteArticleFilterInput
+) {
+  onDeleteEvolinciteArticle(filter: $filter) {
+    id
+    front
+    cover
+    title
+    content
+    articleState
+    visibility
+    publicationDate
+    meta
+    files
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteArticleComment(
+  $filter: ModelSubscriptionEvolinciteArticleCommentFilterInput
+) {
+  onCreateEvolinciteArticleComment(filter: $filter) {
+    id
+    content
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteArticleID
+    EvolinciteArticle {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteArticleComment(
+  $filter: ModelSubscriptionEvolinciteArticleCommentFilterInput
+) {
+  onUpdateEvolinciteArticleComment(filter: $filter) {
+    id
+    content
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteArticleID
+    EvolinciteArticle {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteArticleComment(
+  $filter: ModelSubscriptionEvolinciteArticleCommentFilterInput
+) {
+  onDeleteEvolinciteArticleComment(filter: $filter) {
+    id
+    content
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteArticleID
+    EvolinciteArticle {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteFormConfiguration(
+  $filter: ModelSubscriptionEvolinciteFormConfigurationFilterInput
+) {
+  onCreateEvolinciteFormConfiguration(filter: $filter) {
+    id
+    key
+    name
+    config
+    meta
+    title
+    description
+    observations
+    front
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteFormConfiguration(
+  $filter: ModelSubscriptionEvolinciteFormConfigurationFilterInput
+) {
+  onUpdateEvolinciteFormConfiguration(filter: $filter) {
+    id
+    key
+    name
+    config
+    meta
+    title
+    description
+    observations
+    front
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteFormConfiguration(
+  $filter: ModelSubscriptionEvolinciteFormConfigurationFilterInput
+) {
+  onDeleteEvolinciteFormConfiguration(filter: $filter) {
+    id
+    key
+    name
+    config
+    meta
+    title
+    description
+    observations
+    front
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteFormAnswer(
+  $filter: ModelSubscriptionEvolinciteFormAnswerFilterInput
+) {
+  onCreateEvolinciteFormAnswer(filter: $filter) {
+    id
+    meta
+    answerState
+    state
+    evolinciteUserID
+    evolinciteFormConfigurationID
+    EvolinciteFormConfiguration {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteFormAnswer(
+  $filter: ModelSubscriptionEvolinciteFormAnswerFilterInput
+) {
+  onUpdateEvolinciteFormAnswer(filter: $filter) {
+    id
+    meta
+    answerState
+    state
+    evolinciteUserID
+    evolinciteFormConfigurationID
+    EvolinciteFormConfiguration {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteFormAnswer(
+  $filter: ModelSubscriptionEvolinciteFormAnswerFilterInput
+) {
+  onDeleteEvolinciteFormAnswer(filter: $filter) {
+    id
+    meta
+    answerState
+    state
+    evolinciteUserID
+    evolinciteFormConfigurationID
+    EvolinciteFormConfiguration {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolincitePaymentAutomation(
+  $filter: ModelSubscriptionEvolincitePaymentAutomationFilterInput
+) {
+  onCreateEvolincitePaymentAutomation(filter: $filter) {
+    id
+    name
+    setting
+    order
+    repeat
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolincitePaymentAutomation(
+  $filter: ModelSubscriptionEvolincitePaymentAutomationFilterInput
+) {
+  onUpdateEvolincitePaymentAutomation(filter: $filter) {
+    id
+    name
+    setting
+    order
+    repeat
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolincitePaymentAutomation(
+  $filter: ModelSubscriptionEvolincitePaymentAutomationFilterInput
+) {
+  onDeleteEvolincitePaymentAutomation(filter: $filter) {
+    id
+    name
+    setting
+    order
+    repeat
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteMail(
+  $filter: ModelSubscriptionEvolinciteMailFilterInput
+) {
+  onCreateEvolinciteMail(filter: $filter) {
+    id
+    destinations
+    subject
+    content
+    submissionStatus
+    setting
+    response
+    files
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteMail(
+  $filter: ModelSubscriptionEvolinciteMailFilterInput
+) {
+  onUpdateEvolinciteMail(filter: $filter) {
+    id
+    destinations
+    subject
+    content
+    submissionStatus
+    setting
+    response
+    files
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteMail(
+  $filter: ModelSubscriptionEvolinciteMailFilterInput
+) {
+  onDeleteEvolinciteMail(filter: $filter) {
+    id
+    destinations
+    subject
+    content
+    submissionStatus
+    setting
+    response
+    files
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteMailConfiguration(
+  $filter: ModelSubscriptionEvolinciteMailConfigurationFilterInput
+) {
+  onCreateEvolinciteMailConfiguration(filter: $filter) {
+    id
+    SMTP
+    email
+    password
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteMailConfiguration(
+  $filter: ModelSubscriptionEvolinciteMailConfigurationFilterInput
+) {
+  onUpdateEvolinciteMailConfiguration(filter: $filter) {
+    id
+    SMTP
+    email
+    password
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteMailConfiguration(
+  $filter: ModelSubscriptionEvolinciteMailConfigurationFilterInput
+) {
+  onDeleteEvolinciteMailConfiguration(filter: $filter) {
+    id
+    SMTP
+    email
+    password
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteMailTemplate(
+  $filter: ModelSubscriptionEvolinciteMailTemplateFilterInput
+) {
+  onCreateEvolinciteMailTemplate(filter: $filter) {
+    id
+    destinations
+    subject
+    content
+    files
+    transmitter
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteMailTemplate(
+  $filter: ModelSubscriptionEvolinciteMailTemplateFilterInput
+) {
+  onUpdateEvolinciteMailTemplate(filter: $filter) {
+    id
+    destinations
+    subject
+    content
+    files
+    transmitter
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteMailTemplate(
+  $filter: ModelSubscriptionEvolinciteMailTemplateFilterInput
+) {
+  onDeleteEvolinciteMailTemplate(filter: $filter) {
+    id
+    destinations
+    subject
+    content
+    files
+    transmitter
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteMailTemplateLog(
+  $filter: ModelSubscriptionEvolinciteMailTemplateLogFilterInput
+) {
+  onCreateEvolinciteMailTemplateLog(filter: $filter) {
+    id
+    key
+    log
+    date
+    previousLog
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteMailTemplateLog(
+  $filter: ModelSubscriptionEvolinciteMailTemplateLogFilterInput
+) {
+  onUpdateEvolinciteMailTemplateLog(filter: $filter) {
+    id
+    key
+    log
+    date
+    previousLog
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteMailTemplateLog(
+  $filter: ModelSubscriptionEvolinciteMailTemplateLogFilterInput
+) {
+  onDeleteEvolinciteMailTemplateLog(filter: $filter) {
+    id
+    key
+    log
+    date
+    previousLog
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolincitePackage(
+  $filter: ModelSubscriptionEvolincitePackageFilterInput
+) {
+  onCreateEvolincitePackage(filter: $filter) {
+    id
+    name
+    description
+    goal
+    duration
+    state
+    EvolinciteFunctionalities {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolincitePackage(
+  $filter: ModelSubscriptionEvolincitePackageFilterInput
+) {
+  onUpdateEvolincitePackage(filter: $filter) {
+    id
+    name
+    description
+    goal
+    duration
+    state
+    EvolinciteFunctionalities {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolincitePackage(
+  $filter: ModelSubscriptionEvolincitePackageFilterInput
+) {
+  onDeleteEvolincitePackage(filter: $filter) {
+    id
+    name
+    description
+    goal
+    duration
+    state
+    EvolinciteFunctionalities {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteCompanySubscription(
+  $filter: ModelSubscriptionEvolinciteCompanySubscriptionFilterInput
+) {
+  onCreateEvolinciteCompanySubscription(filter: $filter) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    activatorUser
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteCompanySubscription(
+  $filter: ModelSubscriptionEvolinciteCompanySubscriptionFilterInput
+) {
+  onUpdateEvolinciteCompanySubscription(filter: $filter) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    activatorUser
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteCompanySubscription(
+  $filter: ModelSubscriptionEvolinciteCompanySubscriptionFilterInput
+) {
+  onDeleteEvolinciteCompanySubscription(filter: $filter) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    activatorUser
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteEmployeeObservation(
+  $filter: ModelSubscriptionEvolinciteEmployeeObservationFilterInput
+) {
+  onCreateEvolinciteEmployeeObservation(filter: $filter) {
+    id
+    name
+    content
+    isPublic
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteEmployeeObservation(
+  $filter: ModelSubscriptionEvolinciteEmployeeObservationFilterInput
+) {
+  onUpdateEvolinciteEmployeeObservation(filter: $filter) {
+    id
+    name
+    content
+    isPublic
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteEmployeeObservation(
+  $filter: ModelSubscriptionEvolinciteEmployeeObservationFilterInput
+) {
+  onDeleteEvolinciteEmployeeObservation(filter: $filter) {
+    id
+    name
+    content
+    isPublic
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteTag(
+  $filter: ModelSubscriptionEvolinciteTagFilterInput
+) {
+  onCreateEvolinciteTag(filter: $filter) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteTag(
+  $filter: ModelSubscriptionEvolinciteTagFilterInput
+) {
+  onUpdateEvolinciteTag(filter: $filter) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteTag(
+  $filter: ModelSubscriptionEvolinciteTagFilterInput
+) {
+  onDeleteEvolinciteTag(filter: $filter) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteMilestone(
+  $filter: ModelSubscriptionEvolinciteMilestoneFilterInput
+) {
+  onCreateEvolinciteMilestone(filter: $filter) {
+    name
+    description
+    tags
+    type
+    config
+    startDate
+    endDate
+    employees
+    managers
+    isClosed
+    closingNotes
+    log
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    id
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteMilestone(
+  $filter: ModelSubscriptionEvolinciteMilestoneFilterInput
+) {
+  onUpdateEvolinciteMilestone(filter: $filter) {
+    name
+    description
+    tags
+    type
+    config
+    startDate
+    endDate
+    employees
+    managers
+    isClosed
+    closingNotes
+    log
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    id
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteMilestone(
+  $filter: ModelSubscriptionEvolinciteMilestoneFilterInput
+) {
+  onDeleteEvolinciteMilestone(filter: $filter) {
+    name
+    description
+    tags
+    type
+    config
+    startDate
+    endDate
+    employees
+    managers
+    isClosed
+    closingNotes
+    log
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    id
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserLog(
+  $filter: ModelSubscriptionEvolinciteUserLogFilterInput
+) {
+  onCreateEvolinciteUserLog(filter: $filter) {
+    id
+    log
+    functionality
+    state
+    key
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserLog(
+  $filter: ModelSubscriptionEvolinciteUserLogFilterInput
+) {
+  onUpdateEvolinciteUserLog(filter: $filter) {
+    id
+    log
+    functionality
+    state
+    key
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserLog(
+  $filter: ModelSubscriptionEvolinciteUserLogFilterInput
+) {
+  onDeleteEvolinciteUserLog(filter: $filter) {
+    id
+    log
+    functionality
+    state
+    key
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserTimeTracking(
+  $filter: ModelSubscriptionEvolinciteUserTimeTrackingFilterInput
+) {
+  onCreateEvolinciteUserTimeTracking(filter: $filter) {
+    id
+    time
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserTimeTracking(
+  $filter: ModelSubscriptionEvolinciteUserTimeTrackingFilterInput
+) {
+  onUpdateEvolinciteUserTimeTracking(filter: $filter) {
+    id
+    time
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserTimeTracking(
+  $filter: ModelSubscriptionEvolinciteUserTimeTrackingFilterInput
+) {
+  onDeleteEvolinciteUserTimeTracking(filter: $filter) {
+    id
+    time
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteSchedule(
+  $filter: ModelSubscriptionEvolinciteScheduleFilterInput
+) {
+  onCreateEvolinciteSchedule(filter: $filter) {
+    id
+    name
+    description
+    config
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteSchedule(
+  $filter: ModelSubscriptionEvolinciteScheduleFilterInput
+) {
+  onUpdateEvolinciteSchedule(filter: $filter) {
+    id
+    name
+    description
+    config
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteSchedule(
+  $filter: ModelSubscriptionEvolinciteScheduleFilterInput
+) {
+  onDeleteEvolinciteSchedule(filter: $filter) {
+    id
+    name
+    description
+    config
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteTemplateRequest(
+  $filter: ModelSubscriptionEvolinciteTemplateRequestFilterInput
+) {
+  onCreateEvolinciteTemplateRequest(filter: $filter) {
+    id
+    name
+    description
+    tags
+    questions
+    elementType
+    documents
+    meta
+    owners
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteTemplateRequest(
+  $filter: ModelSubscriptionEvolinciteTemplateRequestFilterInput
+) {
+  onUpdateEvolinciteTemplateRequest(filter: $filter) {
+    id
+    name
+    description
+    tags
+    questions
+    elementType
+    documents
+    meta
+    owners
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteTemplateRequest(
+  $filter: ModelSubscriptionEvolinciteTemplateRequestFilterInput
+) {
+  onDeleteEvolinciteTemplateRequest(filter: $filter) {
+    id
+    name
+    description
+    tags
+    questions
+    elementType
+    documents
+    meta
+    owners
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteRequest(
+  $filter: ModelSubscriptionEvolinciteRequestFilterInput
+) {
+  onCreateEvolinciteRequest(filter: $filter) {
+    id
+    templateID
+    answers
+    requester
+    priority
+    elementID
+    elementType
+    status
+    meta
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteRequest(
+  $filter: ModelSubscriptionEvolinciteRequestFilterInput
+) {
+  onUpdateEvolinciteRequest(filter: $filter) {
+    id
+    templateID
+    answers
+    requester
+    priority
+    elementID
+    elementType
+    status
+    meta
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteRequest(
+  $filter: ModelSubscriptionEvolinciteRequestFilterInput
+) {
+  onDeleteEvolinciteRequest(filter: $filter) {
+    id
+    templateID
+    answers
+    requester
+    priority
+    elementID
+    elementType
+    status
+    meta
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteActivityEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteActivityEvolinciteUserFilterInput
+) {
+  onCreateEvolinciteActivityEvolinciteUser(filter: $filter) {
+    id
+    evolinciteActivityId
+    evolinciteUserId
+    evolinciteActivity {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteActivityEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteActivityEvolinciteUserFilterInput
+) {
+  onUpdateEvolinciteActivityEvolinciteUser(filter: $filter) {
+    id
+    evolinciteActivityId
+    evolinciteUserId
+    evolinciteActivity {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteActivityEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteActivityEvolinciteUserFilterInput
+) {
+  onDeleteEvolinciteActivityEvolinciteUser(filter: $filter) {
+    id
+    evolinciteActivityId
+    evolinciteUserId
+    evolinciteActivity {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteUserEvolinciteCrmNegotiation(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteCrmNegotiationFilterInput
+) {
+  onCreateEvolinciteUserEvolinciteCrmNegotiation(filter: $filter) {
+    id
+    evolinciteCrmNegotiationId
+    evolinciteUserId
+    evolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteUserEvolinciteCrmNegotiation(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteCrmNegotiationFilterInput
+) {
+  onUpdateEvolinciteUserEvolinciteCrmNegotiation(filter: $filter) {
+    id
+    evolinciteCrmNegotiationId
+    evolinciteUserId
+    evolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteUserEvolinciteCrmNegotiation(
+  $filter: ModelSubscriptionEvolinciteUserEvolinciteCrmNegotiationFilterInput
+) {
+  onDeleteEvolinciteUserEvolinciteCrmNegotiation(filter: $filter) {
+    id
+    evolinciteCrmNegotiationId
+    evolinciteUserId
+    evolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnCreateEvolinciteRoomEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteRoomEvolinciteUserFilterInput
+) {
+  onCreateEvolinciteRoomEvolinciteUser(filter: $filter) {
+    id
+    evolinciteRoomId
+    evolinciteUserId
+    evolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnUpdateEvolinciteRoomEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteRoomEvolinciteUserFilterInput
+) {
+  onUpdateEvolinciteRoomEvolinciteUser(filter: $filter) {
+    id
+    evolinciteRoomId
+    evolinciteUserId
+    evolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+subscription OnDeleteEvolinciteRoomEvolinciteUser(
+  $filter: ModelSubscriptionEvolinciteRoomEvolinciteUserFilterInput
+) {
+  onDeleteEvolinciteRoomEvolinciteUser(filter: $filter) {
+    id
+    evolinciteRoomId
+    evolinciteUserId
+    evolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}

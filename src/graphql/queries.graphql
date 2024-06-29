@@ -1,0 +1,9764 @@
+# this is an auto generated file. This will be overwritten
+
+query GetEvolinciteCompetence($id: ID!) {
+  getEvolinciteCompetence(id: $id) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCompetenceEvolinciteSyllabusId
+    __typename
+  }
+}
+
+query ListEvolinciteCompetences(
+  $filter: ModelEvolinciteCompetenceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCompetences(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteCompetenceEvolinciteSyllabusId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCourse($id: ID!) {
+  getEvolinciteCourse(id: $id) {
+    id
+    name
+    description
+    durationUnit
+    duration
+    objectives
+    application
+    state
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteCourseEvolinciteSyllabusId
+    __typename
+  }
+}
+
+query ListEvolinciteCourses(
+  $filter: ModelEvolinciteCourseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCourses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      durationUnit
+      duration
+      objectives
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteCourseEvolinciteSyllabusId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteSyllabus($id: ID!) {
+  getEvolinciteSyllabus(id: $id) {
+    id
+    name
+    description
+    content
+    application
+    state
+    EvolinciteCompetence {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteCompetenceEvolinciteSyllabusId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteSyllabusEvolinciteCompetenceId
+    __typename
+  }
+}
+
+query ListEvolinciteSyllabi(
+  $filter: ModelEvolinciteSyllabusFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteSyllabi(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserAnswers($id: ID!) {
+  getEvolinciteUserAnswers(id: $id) {
+    id
+    answers
+    application
+    state
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteSyllabus {
+      id
+      name
+      description
+      content
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteSyllabusEvolinciteCompetenceId
+      __typename
+    }
+    createdAt
+    updatedAt
+    evolinciteUserAnswersEvolinciteUserId
+    evolinciteUserAnswersEvolinciteSyllabusId
+    __typename
+  }
+}
+
+query ListEvolinciteUserAnswers(
+  $filter: ModelEvolinciteUserAnswersFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserAnswers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      answers
+      application
+      state
+      createdAt
+      updatedAt
+      evolinciteUserAnswersEvolinciteUserId
+      evolinciteUserAnswersEvolinciteSyllabusId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteProcessType($id: ID!) {
+  getEvolinciteProcessType(id: $id) {
+    id
+    name
+    order
+    sellerCommission
+    referrerCommission
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteProcessTypes(
+  $filter: ModelEvolinciteProcessTypeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteProcessTypes(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      order
+      sellerCommission
+      referrerCommission
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteProcessTypesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteProcessTypeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteProcessTypesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      order
+      sellerCommission
+      referrerCommission
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteExpenseType($id: ID!) {
+  getEvolinciteExpenseType(id: $id) {
+    id
+    name
+    type
+    setting
+    state
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteExpenseTypes(
+  $filter: ModelEvolinciteExpenseTypeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteExpenseTypes(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      type
+      setting
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpenseTypesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseTypeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpenseTypesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      type
+      setting
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteExpense($id: ID!) {
+  getEvolinciteExpense(id: $id) {
+    id
+    amount
+    process
+    expenseState
+    expenseDate
+    observations
+    voucher
+    transactionType
+    reference
+    state
+    evolinciteExpenseTypeID
+    EvolinciteExpenseType {
+      id
+      name
+      type
+      setting
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteExpenses(
+  $filter: ModelEvolinciteExpenseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteExpenses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpensesByEvolinciteExpenseTypeID(
+  $evolinciteExpenseTypeID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpensesByEvolinciteExpenseTypeID(
+    evolinciteExpenseTypeID: $evolinciteExpenseTypeID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpensesByEvolinciteCrmNegotiationID(
+  $evolinciteCrmNegotiationID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpensesByEvolinciteCrmNegotiationID(
+    evolinciteCrmNegotiationID: $evolinciteCrmNegotiationID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpensesByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpensesByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpensesByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpensesByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpensesByEvolinciteUserResponsibleIDAndCreatedAt(
+  $evolinciteUserResponsibleID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpensesByEvolinciteUserResponsibleIDAndCreatedAt(
+    evolinciteUserResponsibleID: $evolinciteUserResponsibleID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserEvolinciteJobTitle($id: ID!) {
+  getEvolinciteUserEvolinciteJobTitle(id: $id) {
+    id
+    state
+    evolinciteJobTitleID
+    EvolinciteJobTitle {
+      id
+      name
+      salary
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserEvolinciteJobTitles(
+  $filter: ModelEvolinciteUserEvolinciteJobTitleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserEvolinciteJobTitles(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteJobTitleID
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteJobTitlesByEvolinciteJobTitleID(
+  $evolinciteJobTitleID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteJobTitleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteJobTitlesByEvolinciteJobTitleID(
+    evolinciteJobTitleID: $evolinciteJobTitleID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteJobTitleID
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteJobTitlesByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteJobTitleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteJobTitlesByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteJobTitleID
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteJobTitlesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteJobTitleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteJobTitlesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteJobTitleID
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteJobTitle($id: ID!) {
+  getEvolinciteJobTitle(id: $id) {
+    id
+    name
+    salary
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteJobTitles(
+  $filter: ModelEvolinciteJobTitleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteJobTitles(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      salary
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteJobTitlesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteJobTitleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteJobTitlesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      salary
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteWalletPayment($id: ID!) {
+  getEvolinciteWalletPayment(id: $id) {
+    id
+    amount
+    scheduledDate
+    datePayment
+    paymentStatus
+    prePayment
+    postPayment
+    observations
+    voucher
+    transactionType
+    reference
+    amountInterest
+    amountCollection
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    evolinciteUserResponsibleID
+    EvolinciteUserResponsible {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteWalletPayments(
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteWalletPayments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentsByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentsByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentsByEvolinciteUserReferrerID(
+  $evolinciteUserReferrerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentsByEvolinciteUserReferrerID(
+    evolinciteUserReferrerID: $evolinciteUserReferrerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentsByEvolinciteUserSellerID(
+  $evolinciteUserSellerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentsByEvolinciteUserSellerID(
+    evolinciteUserSellerID: $evolinciteUserSellerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentsByEvolinciteCrmNegotiationID(
+  $evolinciteCrmNegotiationID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentsByEvolinciteCrmNegotiationID(
+    evolinciteCrmNegotiationID: $evolinciteCrmNegotiationID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentsByEvolinciteCustomerID(
+  $evolinciteCustomerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentsByEvolinciteCustomerID(
+    evolinciteCustomerID: $evolinciteCustomerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentsByEvolinciteUserResponsibleIDAndCreatedAt(
+  $evolinciteUserResponsibleID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentsByEvolinciteUserResponsibleIDAndCreatedAt(
+    evolinciteUserResponsibleID: $evolinciteUserResponsibleID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmNegotiationField($id: ID!) {
+  getEvolinciteCrmNegotiationField(id: $id) {
+    id
+    field
+    type
+    required
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmNegotiationSectionID
+    EvolinciteCrmNegotiationSection {
+      id
+      name
+      order
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmNegotiationFields(
+  $filter: ModelEvolinciteCrmNegotiationFieldFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmNegotiationFields(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationFieldsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFieldFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationFieldsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationFieldsByEvolinciteCrmNegotiationSectionID(
+  $evolinciteCrmNegotiationSectionID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFieldFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationFieldsByEvolinciteCrmNegotiationSectionID(
+    evolinciteCrmNegotiationSectionID: $evolinciteCrmNegotiationSectionID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmNegotiationSection($id: ID!) {
+  getEvolinciteCrmNegotiationSection(id: $id) {
+    id
+    name
+    order
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmNegotiationSections(
+  $filter: ModelEvolinciteCrmNegotiationSectionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmNegotiationSections(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      order
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationSectionsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationSectionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationSectionsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      order
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmAutomation($id: ID!) {
+  getEvolinciteCrmAutomation(id: $id) {
+    id
+    name
+    rule
+    setting
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmAutomations(
+  $filter: ModelEvolinciteCrmAutomationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmAutomations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      rule
+      setting
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmStateID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmAutomationsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmAutomationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmAutomationsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      rule
+      setting
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmStateID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmAutomationsByEvolinciteCrmStateIDAndOrder(
+  $evolinciteCrmStateID: ID!
+  $order: ModelFloatKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmAutomationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmAutomationsByEvolinciteCrmStateIDAndOrder(
+    evolinciteCrmStateID: $evolinciteCrmStateID
+    order: $order
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      rule
+      setting
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmStateID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteComment($id: ID!) {
+  getEvolinciteComment(id: $id) {
+    id
+    files
+    content
+    pinned
+    state
+    evolinciteUserID
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteComments(
+  $filter: ModelEvolinciteCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteComments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      files
+      content
+      pinned
+      state
+      evolinciteUserID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCommentsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCommentsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      files
+      content
+      pinned
+      state
+      evolinciteUserID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCommentsByEvolinciteCrmNegotiationIDAndCreatedAt(
+  $evolinciteCrmNegotiationID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCommentsByEvolinciteCrmNegotiationIDAndCreatedAt(
+    evolinciteCrmNegotiationID: $evolinciteCrmNegotiationID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      files
+      content
+      pinned
+      state
+      evolinciteUserID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteActivity($id: ID!) {
+  getEvolinciteActivity(id: $id) {
+    id
+    name
+    description
+    startDate
+    endDate
+    color
+    type
+    priority
+    meta
+    taskState
+    documents
+    state
+    evolinciteUserID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    Participants {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteActivities(
+  $filter: ModelEvolinciteActivityFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteActivities(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteActivitiesByEvolinciteUserIDAndEndDate(
+  $evolinciteUserID: ID!
+  $endDate: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteActivityFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteActivitiesByEvolinciteUserIDAndEndDate(
+    evolinciteUserID: $evolinciteUserID
+    endDate: $endDate
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteActivitiesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteActivityFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteActivitiesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteActivitiesByEvolinciteCrmNegotiationID(
+  $evolinciteCrmNegotiationID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteActivityFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteActivitiesByEvolinciteCrmNegotiationID(
+    evolinciteCrmNegotiationID: $evolinciteCrmNegotiationID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolincitePermissions($id: ID!) {
+  getEvolincitePermissions(id: $id) {
+    id
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    evolinciteDepartmentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRolID
+    EvolinciteRol {
+      id
+      name
+      permissions
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolincitePermissions(
+  $filter: ModelEvolincitePermissionsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolincitePermissions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      evolinciteRolID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolincitePermissionsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolincitePermissionsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolincitePermissionsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      evolinciteRolID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolincitePermissionsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolincitePermissionsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolincitePermissionsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      evolinciteRolID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolincitePermissionsByEvolinciteDepartmentID(
+  $evolinciteDepartmentID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolincitePermissionsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolincitePermissionsByEvolinciteDepartmentID(
+    evolinciteDepartmentID: $evolinciteDepartmentID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      evolinciteRolID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolincitePermissionsByEvolinciteRolID(
+  $evolinciteRolID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolincitePermissionsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolincitePermissionsByEvolinciteRolID(
+    evolinciteRolID: $evolinciteRolID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      evolinciteRolID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteDepartment($id: ID!) {
+  getEvolinciteDepartment(id: $id) {
+    id
+    name
+    parent
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteDepartments(
+  $filter: ModelEvolinciteDepartmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteDepartments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteDepartmentsByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteDepartmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteDepartmentsByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteSubscription($id: ID!) {
+  getEvolinciteSubscription(id: $id) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    state
+    EvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteSubscriptions(
+  $filter: ModelEvolinciteSubscriptionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteSubscriptions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteModule($id: ID!) {
+  getEvolinciteModule(id: $id) {
+    id
+    name
+    state
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteModules(
+  $filter: ModelEvolinciteModuleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteModules(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteFunctionality($id: ID!) {
+  getEvolinciteFunctionality(id: $id) {
+    id
+    name
+    functionalities
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteFunctionalities(
+  $filter: ModelEvolinciteFunctionalityFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteFunctionalities(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      functionalities
+      state
+      evolincitePackageID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFunctionalitiesByEvolincitePackageID(
+  $evolincitePackageID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFunctionalityFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFunctionalitiesByEvolincitePackageID(
+    evolincitePackageID: $evolincitePackageID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      functionalities
+      state
+      evolincitePackageID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteRol($id: ID!) {
+  getEvolinciteRol(id: $id) {
+    id
+    name
+    permissions
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteRols(
+  $filter: ModelEvolinciteRolFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteRols(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      permissions
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRolsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRolFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRolsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      permissions
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCustomer($id: ID!) {
+  getEvolinciteCustomer(id: $id) {
+    id
+    name
+    lastName
+    documentType
+    documentNumber
+    phone
+    optionalPhone
+    email
+    picture
+    birthDate
+    municipality
+    documents
+    address
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCustomers(
+  $filter: ModelEvolinciteCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCustomers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCustomersByDocumentNumber(
+  $documentNumber: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCustomersByDocumentNumber(
+    documentNumber: $documentNumber
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCustomersByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCustomersByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserSettings($id: ID!) {
+  getEvolinciteUserSettings(id: $id) {
+    id
+    settings
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserSettings(
+  $filter: ModelEvolinciteUserSettingsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserSettings(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      settings
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserSettingsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserSettingsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserSettingsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      settings
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserSettingsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserSettingsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserSettingsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      settings
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmPipeline($id: ID!) {
+  getEvolinciteCrmPipeline(id: $id) {
+    id
+    name
+    description
+    publicDescription
+    order
+    state
+    meta
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmPipelines(
+  $filter: ModelEvolinciteCrmPipelineFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmPipelines(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      publicDescription
+      order
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmPipelinesByEvolinciteCompanyIDAndOrder(
+  $evolinciteCompanyID: ID!
+  $order: ModelFloatKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmPipelineFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmPipelinesByEvolinciteCompanyIDAndOrder(
+    evolinciteCompanyID: $evolinciteCompanyID
+    order: $order
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      publicDescription
+      order
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmState($id: ID!) {
+  getEvolinciteCrmState(id: $id) {
+    id
+    name
+    description
+    publicDescription
+    color
+    order
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    evolinciteCrmPipelineID
+    EvolinciteCrmPipeline {
+      id
+      name
+      description
+      publicDescription
+      order
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmStates(
+  $filter: ModelEvolinciteCrmStateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmStates(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmStatesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmStateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmStatesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmStatesByEvolinciteCrmPipelineIDAndOrder(
+  $evolinciteCrmPipelineID: ID!
+  $order: ModelFloatKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmStateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmStatesByEvolinciteCrmPipelineIDAndOrder(
+    evolinciteCrmPipelineID: $evolinciteCrmPipelineID
+    order: $order
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmNegotiationLog($id: ID!) {
+  getEvolinciteCrmNegotiationLog(id: $id) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteCrmNegotiationID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmNegotiationLogs(
+  $filter: ModelEvolinciteCrmNegotiationLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmNegotiationLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationLogsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationLogsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationLogsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationLogsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationLogsByEvolinciteCrmNegotiationIDAndCreatedAt(
+  $evolinciteCrmNegotiationID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationLogsByEvolinciteCrmNegotiationIDAndCreatedAt(
+    evolinciteCrmNegotiationID: $evolinciteCrmNegotiationID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmNegotiation($id: ID!) {
+  getEvolinciteCrmNegotiation(id: $id) {
+    id
+    name
+    value
+    due
+    parent
+    date
+    documents
+    meta
+    frozen
+    valueInterest
+    valueCollection
+    observers
+    exitDate
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserSellerID
+    EvolinciteUserSeller {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserReferrerID
+    EvolinciteUserReferrer {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserOwnerID
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationFieldValues {
+      nextToken
+      __typename
+    }
+    evolinciteCrmStateID
+    EvolinciteCrmState {
+      id
+      name
+      description
+      publicDescription
+      color
+      order
+      state
+      evolinciteCompanyID
+      evolinciteCrmPipelineID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    evolinciteCustomerID
+    EvolinciteCustomer {
+      id
+      name
+      lastName
+      documentType
+      documentNumber
+      phone
+      optionalPhone
+      email
+      picture
+      birthDate
+      municipality
+      documents
+      address
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolinciteUsersObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    evolinciteProcessTypeID
+    EvolinciteProcessType {
+      id
+      name
+      order
+      sellerCommission
+      referrerCommission
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    initialGoalID
+    InitialGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    finalGoalID
+    FinalGoal {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmNegotiations(
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmNegotiations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByParent(
+  $parent: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByParent(
+    parent: $parent
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteUserSellerID(
+  $evolinciteUserSellerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteUserSellerID(
+    evolinciteUserSellerID: $evolinciteUserSellerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteUserReferrerID(
+  $evolinciteUserReferrerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteUserReferrerID(
+    evolinciteUserReferrerID: $evolinciteUserReferrerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteUserOwnerID(
+  $evolinciteUserOwnerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteUserOwnerID(
+    evolinciteUserOwnerID: $evolinciteUserOwnerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteCrmStateIDAndCreatedAt(
+  $evolinciteCrmStateID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteCrmStateIDAndCreatedAt(
+    evolinciteCrmStateID: $evolinciteCrmStateID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteCustomerID(
+  $evolinciteCustomerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteCustomerID(
+    evolinciteCustomerID: $evolinciteCustomerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByEvolinciteProcessTypeID(
+  $evolinciteProcessTypeID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByEvolinciteProcessTypeID(
+    evolinciteProcessTypeID: $evolinciteProcessTypeID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByInitialGoalID(
+  $initialGoalID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByInitialGoalID(
+    initialGoalID: $initialGoalID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationsByFinalGoalID(
+  $finalGoalID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationsByFinalGoalID(
+    finalGoalID: $finalGoalID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteRoom($id: ID!) {
+  getEvolinciteRoom(id: $id) {
+    id
+    Key
+    name
+    state
+    meta
+    EvolinciteUsers {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteRooms(
+  $filter: ModelEvolinciteRoomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteRooms(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRoomsByKey(
+  $Key: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRoomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRoomsByKey(
+    Key: $Key
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRoomsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRoomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRoomsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteMessage($id: ID!) {
+  getEvolinciteMessage(id: $id) {
+    id
+    content
+    type
+    state
+    createdAt
+    updatedAt
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteRoomID
+    EvolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    __typename
+  }
+}
+
+query ListEvolinciteMessages(
+  $filter: ModelEvolinciteMessageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteMessages(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      type
+      state
+      createdAt
+      updatedAt
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteRoomID
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMessagesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMessageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMessagesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      type
+      state
+      createdAt
+      updatedAt
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteRoomID
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMessagesByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMessageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMessagesByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      type
+      state
+      createdAt
+      updatedAt
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteRoomID
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMessagesByEvolinciteRoomIDAndCreatedAt(
+  $evolinciteRoomID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMessageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMessagesByEvolinciteRoomIDAndCreatedAt(
+    evolinciteRoomID: $evolinciteRoomID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      type
+      state
+      createdAt
+      updatedAt
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteRoomID
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCrmNegotiationFieldValue($id: ID!) {
+  getEvolinciteCrmNegotiationFieldValue(id: $id) {
+    id
+    value
+    state
+    evolinciteCrmNegotiationFieldID
+    EvolinciteCrmNegotiationField {
+      id
+      field
+      type
+      required
+      order
+      state
+      meta
+      evolinciteCompanyID
+      evolinciteCrmNegotiationSectionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCrmNegotiationID
+    EvolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCrmNegotiationFieldValues(
+  $filter: ModelEvolinciteCrmNegotiationFieldValueFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCrmNegotiationFieldValues(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      value
+      state
+      evolinciteCrmNegotiationFieldID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationFieldValuesByEvolinciteCrmNegotiationFieldID(
+  $evolinciteCrmNegotiationFieldID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFieldValueFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationFieldValuesByEvolinciteCrmNegotiationFieldID(
+    evolinciteCrmNegotiationFieldID: $evolinciteCrmNegotiationFieldID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      value
+      state
+      evolinciteCrmNegotiationFieldID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCrmNegotiationFieldValuesByEvolinciteCrmNegotiationID(
+  $evolinciteCrmNegotiationID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCrmNegotiationFieldValueFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCrmNegotiationFieldValuesByEvolinciteCrmNegotiationID(
+    evolinciteCrmNegotiationID: $evolinciteCrmNegotiationID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      value
+      state
+      evolinciteCrmNegotiationFieldID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteEmail($id: ID!) {
+  getEvolinciteEmail(id: $id) {
+    id
+    from
+    to
+    content
+    subject
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteEmails(
+  $filter: ModelEvolinciteEmailFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteEmails(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      from
+      to
+      content
+      subject
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteEmailsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteEmailFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteEmailsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      from
+      to
+      content
+      subject
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteEmailTemplate($id: ID!) {
+  getEvolinciteEmailTemplate(id: $id) {
+    id
+    content
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteEmailTemplates(
+  $filter: ModelEvolinciteEmailTemplateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteEmailTemplates(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteEmailTemplatesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteEmailTemplateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteEmailTemplatesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteNotification($id: ID!) {
+  getEvolinciteNotification(id: $id) {
+    id
+    content
+    title
+    priority
+    type
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteNotifications(
+  $filter: ModelEvolinciteNotificationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteNotifications(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      title
+      priority
+      type
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteNotificationsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteNotificationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteNotificationsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      title
+      priority
+      type
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteNotificationsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteNotificationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteNotificationsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      title
+      priority
+      type
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserDepartment($id: ID!) {
+  getEvolinciteUserDepartment(id: $id) {
+    id
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteDepartmentID
+    EvolinciteDepartment {
+      id
+      name
+      parent
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserDepartments(
+  $filter: ModelEvolinciteUserDepartmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserDepartments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserDepartmentsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserDepartmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserDepartmentsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserDepartmentsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserDepartmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserDepartmentsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserDepartmentsByEvolinciteDepartmentID(
+  $evolinciteDepartmentID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserDepartmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserDepartmentsByEvolinciteDepartmentID(
+    evolinciteDepartmentID: $evolinciteDepartmentID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteDepartmentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserEvolinciteCompany($id: ID!) {
+  getEvolinciteUserEvolinciteCompany(id: $id) {
+    id
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserEvolinciteCompanies(
+  $filter: ModelEvolinciteUserEvolinciteCompanyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserEvolinciteCompanies(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteCompaniesByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteCompanyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteCompaniesByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteCompaniesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteCompanyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteCompaniesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUser($id: ID!) {
+  getEvolinciteUser(id: $id) {
+    id
+    name
+    nit
+    phone
+    picture
+    email
+    sub
+    meta
+    cv
+    contract
+    memos
+    personalMail
+    personalPhone
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteActivitiesParticipants {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserSeller {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentsUserReferrer {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteComments {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsObserver {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteTicket {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    EvolinciteFoldersOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUsers(
+  $filter: ModelEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCompany($id: ID!) {
+  getEvolinciteCompany(id: $id) {
+    id
+    name
+    nit
+    picture
+    meta
+    state
+    EvolinciteUserEvolinciteCompanies {
+      nextToken
+      __typename
+    }
+    evolinciteSubscriptionID
+    EvolinciteSubscription {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayments {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationFields {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationSections {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteUserDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteDepartments {
+      nextToken
+      __typename
+    }
+    EvolinciteCustomers {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmPipelines {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmStates {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiations {
+      nextToken
+      __typename
+    }
+    EvolinciteJobTitles {
+      nextToken
+      __typename
+    }
+    EvolinciteNotifications {
+      nextToken
+      __typename
+    }
+    EvolinciteEmailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteEmails {
+      nextToken
+      __typename
+    }
+    EvolinciteMessages {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteActivities {
+      nextToken
+      __typename
+    }
+    EvolincitePermissions {
+      nextToken
+      __typename
+    }
+    EvolinciteRoles {
+      nextToken
+      __typename
+    }
+    EvolinciteUserSettings {
+      nextToken
+      __typename
+    }
+    EvolinciteRooms {
+      nextToken
+      __typename
+    }
+    EvolinciteUserEvolinciteJobTitle {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenses {
+      nextToken
+      __typename
+    }
+    EvolinciteProcessTypes {
+      nextToken
+      __typename
+    }
+    EvolinciteGoal {
+      nextToken
+      __typename
+    }
+    EvolinciteWalletPaymentLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteExpenseLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOwner {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketOrigin {
+      nextToken
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    EvolinciteFolders {
+      nextToken
+      __typename
+    }
+    EvolinciteArticles {
+      nextToken
+      __typename
+    }
+    EvolinciteFormConfigurations {
+      nextToken
+      __typename
+    }
+    EvolincitePaymentAutomations {
+      nextToken
+      __typename
+    }
+    EvolinciteMails {
+      nextToken
+      __typename
+    }
+    EvolinciteMailTemplates {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    EvolinciteEmployeeObservations {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCompanies(
+  $filter: ModelEvolinciteCompanyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCompanies(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCompaniesByNit(
+  $nit: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCompanyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCompaniesByNit(
+    nit: $nit
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCompaniesByEvolinciteSubscriptionID(
+  $evolinciteSubscriptionID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCompanyFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCompaniesByEvolinciteSubscriptionID(
+    evolinciteSubscriptionID: $evolinciteSubscriptionID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteGoal($id: ID!) {
+  getEvolinciteGoal(id: $id) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCrmNegotiationsInitial {
+      nextToken
+      __typename
+    }
+    EvolinciteCrmNegotiationsFinal {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteGoals(
+  $filter: ModelEvolinciteGoalFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteGoals(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteGoalsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteGoalFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteGoalsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteWalletPaymentLog($id: ID!) {
+  getEvolinciteWalletPaymentLog(id: $id) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteWalletPaymentID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteWalletPayment {
+      id
+      amount
+      scheduledDate
+      datePayment
+      paymentStatus
+      prePayment
+      postPayment
+      observations
+      voucher
+      transactionType
+      reference
+      amountInterest
+      amountCollection
+      state
+      evolinciteCompanyID
+      evolinciteUserReferrerID
+      evolinciteUserSellerID
+      evolinciteCrmNegotiationID
+      evolinciteCustomerID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteWalletPaymentLogs(
+  $filter: ModelEvolinciteWalletPaymentLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteWalletPaymentLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteWalletPaymentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentLogsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentLogsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteWalletPaymentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentLogsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentLogsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteWalletPaymentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteWalletPaymentLogsByEvolinciteWalletPaymentIDAndCreatedAt(
+  $evolinciteWalletPaymentID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteWalletPaymentLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteWalletPaymentLogsByEvolinciteWalletPaymentIDAndCreatedAt(
+    evolinciteWalletPaymentID: $evolinciteWalletPaymentID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteWalletPaymentID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteExpenseLog($id: ID!) {
+  getEvolinciteExpenseLog(id: $id) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteExpenseID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteExpense {
+      id
+      amount
+      process
+      expenseState
+      expenseDate
+      observations
+      voucher
+      transactionType
+      reference
+      state
+      evolinciteExpenseTypeID
+      evolinciteCrmNegotiationID
+      evolinciteCompanyID
+      evolinciteUserID
+      evolinciteUserResponsibleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteExpenseLogs(
+  $filter: ModelEvolinciteExpenseLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteExpenseLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteExpenseID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpenseLogsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpenseLogsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteExpenseID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpenseLogsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpenseLogsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteExpenseID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteExpenseLogsByEvolinciteExpenseIDAndCreatedAt(
+  $evolinciteExpenseID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteExpenseLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteExpenseLogsByEvolinciteExpenseIDAndCreatedAt(
+    evolinciteExpenseID: $evolinciteExpenseID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteExpenseID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteTicket($id: ID!) {
+  getEvolinciteTicket(id: $id) {
+    id
+    name
+    description
+    documents
+    meta
+    ticketState
+    state
+    evolinciteUserID
+    evolinciteCompanyOwnerID
+    evolinciteCompanyOriginID
+    EvolinciteCompanyOwner {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteCompanyOrigin {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicketLogs {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteTickets(
+  $filter: ModelEvolinciteTicketFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteTickets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTicketsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTicketFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTicketsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTicketsByEvolinciteCompanyOwnerID(
+  $evolinciteCompanyOwnerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTicketFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTicketsByEvolinciteCompanyOwnerID(
+    evolinciteCompanyOwnerID: $evolinciteCompanyOwnerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTicketsByEvolinciteCompanyOriginID(
+  $evolinciteCompanyOriginID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTicketFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTicketsByEvolinciteCompanyOriginID(
+    evolinciteCompanyOriginID: $evolinciteCompanyOriginID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteTicketLog($id: ID!) {
+  getEvolinciteTicketLog(id: $id) {
+    id
+    log
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteTicketID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteTicket {
+      id
+      name
+      description
+      documents
+      meta
+      ticketState
+      state
+      evolinciteUserID
+      evolinciteCompanyOwnerID
+      evolinciteCompanyOriginID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteTicketLogs(
+  $filter: ModelEvolinciteTicketLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteTicketLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteTicketID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTicketLogsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTicketLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTicketLogsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteTicketID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTicketLogsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTicketLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTicketLogsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteTicketID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTicketLogsByEvolinciteTicketIDAndCreatedAt(
+  $evolinciteTicketID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTicketLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTicketLogsByEvolinciteTicketIDAndCreatedAt(
+    evolinciteTicketID: $evolinciteTicketID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteTicketID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteFile($id: ID!) {
+  getEvolinciteFile(id: $id) {
+    id
+    name
+    size
+    meta
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    evolinciteFolderID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFolder {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteFiles(
+  $filter: ModelEvolinciteFileFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteFiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      size
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteFolderID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFilesByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFileFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFilesByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      size
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteFolderID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFilesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFileFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFilesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      size
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteFolderID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFilesByEvolinciteFolderIDAndUpdatedAt(
+  $evolinciteFolderID: ID!
+  $updatedAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFileFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFilesByEvolinciteFolderIDAndUpdatedAt(
+    evolinciteFolderID: $evolinciteFolderID
+    updatedAt: $updatedAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      size
+      meta
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteFolderID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteFolder($id: ID!) {
+  getEvolinciteFolder(id: $id) {
+    id
+    parent
+    name
+    meta
+    state
+    evolinciteUserID
+    evolinciteUserOwnerID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUserOwner {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFiles {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteFolders(
+  $filter: ModelEvolinciteFolderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteFolders(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFoldersByParent(
+  $parent: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFolderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFoldersByParent(
+    parent: $parent
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFoldersByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFolderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFoldersByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFoldersByEvolinciteUserOwnerID(
+  $evolinciteUserOwnerID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFolderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFoldersByEvolinciteUserOwnerID(
+    evolinciteUserOwnerID: $evolinciteUserOwnerID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFoldersByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFolderFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFoldersByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parent
+      name
+      meta
+      state
+      evolinciteUserID
+      evolinciteUserOwnerID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteArticle($id: ID!) {
+  getEvolinciteArticle(id: $id) {
+    id
+    front
+    cover
+    title
+    content
+    articleState
+    visibility
+    publicationDate
+    meta
+    files
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteArticleComments {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteArticles(
+  $filter: ModelEvolinciteArticleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteArticles(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteArticlesByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteArticleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteArticlesByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteArticlesByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteArticleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteArticlesByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteArticleComment($id: ID!) {
+  getEvolinciteArticleComment(id: $id) {
+    id
+    content
+    state
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteArticleID
+    EvolinciteArticle {
+      id
+      front
+      cover
+      title
+      content
+      articleState
+      visibility
+      publicationDate
+      meta
+      files
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteArticleComments(
+  $filter: ModelEvolinciteArticleCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteArticleComments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      state
+      evolinciteUserID
+      evolinciteArticleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteArticleCommentsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteArticleCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteArticleCommentsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      state
+      evolinciteUserID
+      evolinciteArticleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteArticleCommentsByEvolinciteArticleIDAndCreatedAt(
+  $evolinciteArticleID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteArticleCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteArticleCommentsByEvolinciteArticleIDAndCreatedAt(
+    evolinciteArticleID: $evolinciteArticleID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      content
+      state
+      evolinciteUserID
+      evolinciteArticleID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteFormConfiguration($id: ID!) {
+  getEvolinciteFormConfiguration(id: $id) {
+    id
+    key
+    name
+    config
+    meta
+    title
+    description
+    observations
+    front
+    state
+    evolinciteUserID
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteFormAnswers {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteFormConfigurations(
+  $filter: ModelEvolinciteFormConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteFormConfigurations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFormConfigurationsByKey(
+  $key: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFormConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFormConfigurationsByKey(
+    key: $key
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFormConfigurationsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFormConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFormConfigurationsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFormConfigurationsByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFormConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFormConfigurationsByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteFormAnswer($id: ID!) {
+  getEvolinciteFormAnswer(id: $id) {
+    id
+    meta
+    answerState
+    state
+    evolinciteUserID
+    evolinciteFormConfigurationID
+    EvolinciteFormConfiguration {
+      id
+      key
+      name
+      config
+      meta
+      title
+      description
+      observations
+      front
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteFormAnswers(
+  $filter: ModelEvolinciteFormAnswerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteFormAnswers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      meta
+      answerState
+      state
+      evolinciteUserID
+      evolinciteFormConfigurationID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFormAnswersByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFormAnswerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFormAnswersByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      meta
+      answerState
+      state
+      evolinciteUserID
+      evolinciteFormConfigurationID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFormAnswersByEvolinciteFormConfigurationIDAndCreatedAt(
+  $evolinciteFormConfigurationID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFormAnswerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFormAnswersByEvolinciteFormConfigurationIDAndCreatedAt(
+    evolinciteFormConfigurationID: $evolinciteFormConfigurationID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      meta
+      answerState
+      state
+      evolinciteUserID
+      evolinciteFormConfigurationID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteFormAnswersByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteFormAnswerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteFormAnswersByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      meta
+      answerState
+      state
+      evolinciteUserID
+      evolinciteFormConfigurationID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolincitePaymentAutomation($id: ID!) {
+  getEvolincitePaymentAutomation(id: $id) {
+    id
+    name
+    setting
+    order
+    repeat
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolincitePaymentAutomations(
+  $filter: ModelEvolincitePaymentAutomationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolincitePaymentAutomations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      setting
+      order
+      repeat
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolincitePaymentAutomationsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolincitePaymentAutomationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolincitePaymentAutomationsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      setting
+      order
+      repeat
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteMail($id: ID!) {
+  getEvolinciteMail(id: $id) {
+    id
+    destinations
+    subject
+    content
+    submissionStatus
+    setting
+    response
+    files
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteMails(
+  $filter: ModelEvolinciteMailFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteMails(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      destinations
+      subject
+      content
+      submissionStatus
+      setting
+      response
+      files
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailsByEvolinciteCompanyIDAndCreatedAt(
+  $evolinciteCompanyID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailsByEvolinciteCompanyIDAndCreatedAt(
+    evolinciteCompanyID: $evolinciteCompanyID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      destinations
+      subject
+      content
+      submissionStatus
+      setting
+      response
+      files
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      destinations
+      subject
+      content
+      submissionStatus
+      setting
+      response
+      files
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteMailConfiguration($id: ID!) {
+  getEvolinciteMailConfiguration(id: $id) {
+    id
+    SMTP
+    email
+    password
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteMailConfigurations(
+  $filter: ModelEvolinciteMailConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteMailConfigurations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      SMTP
+      email
+      password
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailConfigurationsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailConfigurationsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      SMTP
+      email
+      password
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailConfigurationsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailConfigurationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailConfigurationsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      SMTP
+      email
+      password
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteMailTemplate($id: ID!) {
+  getEvolinciteMailTemplate(id: $id) {
+    id
+    destinations
+    subject
+    content
+    files
+    transmitter
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteMailTemplates(
+  $filter: ModelEvolinciteMailTemplateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteMailTemplates(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      destinations
+      subject
+      content
+      files
+      transmitter
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailTemplatesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailTemplateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailTemplatesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      destinations
+      subject
+      content
+      files
+      transmitter
+      meta
+      state
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteMailTemplateLog($id: ID!) {
+  getEvolinciteMailTemplateLog(id: $id) {
+    id
+    key
+    log
+    date
+    previousLog
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteMailTemplateLogs(
+  $filter: ModelEvolinciteMailTemplateLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteMailTemplateLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      log
+      date
+      previousLog
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailTemplateLogsByKey(
+  $key: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailTemplateLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailTemplateLogsByKey(
+    key: $key
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      log
+      date
+      previousLog
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailTemplateLogsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailTemplateLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailTemplateLogsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      log
+      date
+      previousLog
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMailTemplateLogsByEvolinciteUserID(
+  $evolinciteUserID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMailTemplateLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMailTemplateLogsByEvolinciteUserID(
+    evolinciteUserID: $evolinciteUserID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      key
+      log
+      date
+      previousLog
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolincitePackage($id: ID!) {
+  getEvolincitePackage(id: $id) {
+    id
+    name
+    description
+    goal
+    duration
+    state
+    EvolinciteFunctionalities {
+      nextToken
+      __typename
+    }
+    EvolinciteCompanySubscriptions {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolincitePackages(
+  $filter: ModelEvolincitePackageFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolincitePackages(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteCompanySubscription($id: ID!) {
+  getEvolinciteCompanySubscription(id: $id) {
+    id
+    name
+    price
+    dateInitial
+    dateFinal
+    activatorUser
+    state
+    evolincitePackageID
+    EvolincitePackage {
+      id
+      name
+      description
+      goal
+      duration
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteCompanySubscriptions(
+  $filter: ModelEvolinciteCompanySubscriptionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteCompanySubscriptions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      activatorUser
+      state
+      evolincitePackageID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCompanySubscriptionsByEvolincitePackageID(
+  $evolincitePackageID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCompanySubscriptionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCompanySubscriptionsByEvolincitePackageID(
+    evolincitePackageID: $evolincitePackageID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      activatorUser
+      state
+      evolincitePackageID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteCompanySubscriptionsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteCompanySubscriptionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteCompanySubscriptionsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      price
+      dateInitial
+      dateFinal
+      activatorUser
+      state
+      evolincitePackageID
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteEmployeeObservation($id: ID!) {
+  getEvolinciteEmployeeObservation(id: $id) {
+    id
+    name
+    content
+    isPublic
+    meta
+    state
+    evolinciteCompanyID
+    EvolinciteCompany {
+      id
+      name
+      nit
+      picture
+      meta
+      state
+      evolinciteSubscriptionID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUserID
+    EvolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteEmployeeObservations(
+  $filter: ModelEvolinciteEmployeeObservationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteEmployeeObservations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      content
+      isPublic
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteEmployeeObservationsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteEmployeeObservationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteEmployeeObservationsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      content
+      isPublic
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteEmployeeObservationsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteEmployeeObservationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteEmployeeObservationsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      content
+      isPublic
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteTag($id: ID!) {
+  getEvolinciteTag(id: $id) {
+    id
+    name
+    description
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteTags(
+  $filter: ModelEvolinciteTagFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTagsByName(
+  $name: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTagFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTagsByName(
+    name: $name
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTagsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTagFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTagsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTagsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTagFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTagsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteMilestone($id: ID!) {
+  getEvolinciteMilestone(id: $id) {
+    name
+    description
+    tags
+    type
+    config
+    startDate
+    endDate
+    employees
+    managers
+    isClosed
+    closingNotes
+    log
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    id
+    __typename
+  }
+}
+
+query ListEvolinciteMilestones(
+  $filter: ModelEvolinciteMilestoneFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteMilestones(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      name
+      description
+      tags
+      type
+      config
+      startDate
+      endDate
+      employees
+      managers
+      isClosed
+      closingNotes
+      log
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      id
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMilestonesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMilestoneFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMilestonesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      name
+      description
+      tags
+      type
+      config
+      startDate
+      endDate
+      employees
+      managers
+      isClosed
+      closingNotes
+      log
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      id
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteMilestonesByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteMilestoneFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteMilestonesByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      name
+      description
+      tags
+      type
+      config
+      startDate
+      endDate
+      employees
+      managers
+      isClosed
+      closingNotes
+      log
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      id
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserLog($id: ID!) {
+  getEvolinciteUserLog(id: $id) {
+    id
+    log
+    functionality
+    state
+    key
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserLogs(
+  $filter: ModelEvolinciteUserLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      functionality
+      state
+      key
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserLogsByKey(
+  $key: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserLogsByKey(
+    key: $key
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      functionality
+      state
+      key
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserLogsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserLogsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      functionality
+      state
+      key
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserLogsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserLogsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      log
+      functionality
+      state
+      key
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserTimeTracking($id: ID!) {
+  getEvolinciteUserTimeTracking(id: $id) {
+    id
+    time
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserTimeTrackings(
+  $filter: ModelEvolinciteUserTimeTrackingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserTimeTrackings(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      time
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserTimeTrackingsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserTimeTrackingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserTimeTrackingsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      time
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserTimeTrackingsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserTimeTrackingFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserTimeTrackingsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      time
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteSchedule($id: ID!) {
+  getEvolinciteSchedule(id: $id) {
+    id
+    name
+    description
+    config
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteSchedules(
+  $filter: ModelEvolinciteScheduleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteSchedules(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      config
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteSchedulesByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteScheduleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteSchedulesByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      config
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteSchedulesByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteScheduleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteSchedulesByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      config
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteTemplateRequest($id: ID!) {
+  getEvolinciteTemplateRequest(id: $id) {
+    id
+    name
+    description
+    tags
+    questions
+    elementType
+    documents
+    meta
+    owners
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteTemplateRequests(
+  $filter: ModelEvolinciteTemplateRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteTemplateRequests(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      tags
+      questions
+      elementType
+      documents
+      meta
+      owners
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTemplateRequestsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTemplateRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTemplateRequestsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      tags
+      questions
+      elementType
+      documents
+      meta
+      owners
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteTemplateRequestsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteTemplateRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteTemplateRequestsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      tags
+      questions
+      elementType
+      documents
+      meta
+      owners
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteRequest($id: ID!) {
+  getEvolinciteRequest(id: $id) {
+    id
+    templateID
+    answers
+    requester
+    priority
+    elementID
+    elementType
+    status
+    meta
+    state
+    evolinciteCompanyID
+    evolinciteUserID
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteRequests(
+  $filter: ModelEvolinciteRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteRequests(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      templateID
+      answers
+      requester
+      priority
+      elementID
+      elementType
+      status
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRequestsByTemplateID(
+  $templateID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRequestsByTemplateID(
+    templateID: $templateID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      templateID
+      answers
+      requester
+      priority
+      elementID
+      elementType
+      status
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRequestsByRequester(
+  $requester: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRequestsByRequester(
+    requester: $requester
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      templateID
+      answers
+      requester
+      priority
+      elementID
+      elementType
+      status
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRequestsByEvolinciteCompanyID(
+  $evolinciteCompanyID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRequestsByEvolinciteCompanyID(
+    evolinciteCompanyID: $evolinciteCompanyID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      templateID
+      answers
+      requester
+      priority
+      elementID
+      elementType
+      status
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRequestsByEvolinciteUserIDAndCreatedAt(
+  $evolinciteUserID: ID!
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRequestsByEvolinciteUserIDAndCreatedAt(
+    evolinciteUserID: $evolinciteUserID
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      templateID
+      answers
+      requester
+      priority
+      elementID
+      elementType
+      status
+      meta
+      state
+      evolinciteCompanyID
+      evolinciteUserID
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteActivityEvolinciteUser($id: ID!) {
+  getEvolinciteActivityEvolinciteUser(id: $id) {
+    id
+    evolinciteActivityId
+    evolinciteUserId
+    evolinciteActivity {
+      id
+      name
+      description
+      startDate
+      endDate
+      color
+      type
+      priority
+      meta
+      taskState
+      documents
+      state
+      evolinciteUserID
+      evolinciteCompanyID
+      evolinciteCrmNegotiationID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteActivityEvolinciteUsers(
+  $filter: ModelEvolinciteActivityEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteActivityEvolinciteUsers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteActivityId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteActivityEvolinciteUsersByEvolinciteActivityId(
+  $evolinciteActivityId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteActivityEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteActivityEvolinciteUsersByEvolinciteActivityId(
+    evolinciteActivityId: $evolinciteActivityId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteActivityId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteActivityEvolinciteUsersByEvolinciteUserId(
+  $evolinciteUserId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteActivityEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteActivityEvolinciteUsersByEvolinciteUserId(
+    evolinciteUserId: $evolinciteUserId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteActivityId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteUserEvolinciteCrmNegotiation($id: ID!) {
+  getEvolinciteUserEvolinciteCrmNegotiation(id: $id) {
+    id
+    evolinciteCrmNegotiationId
+    evolinciteUserId
+    evolinciteCrmNegotiation {
+      id
+      name
+      value
+      due
+      parent
+      date
+      documents
+      meta
+      frozen
+      valueInterest
+      valueCollection
+      observers
+      exitDate
+      state
+      evolinciteCompanyID
+      evolinciteUserSellerID
+      evolinciteUserReferrerID
+      evolinciteUserOwnerID
+      evolinciteCrmStateID
+      evolinciteCustomerID
+      evolinciteProcessTypeID
+      initialGoalID
+      finalGoalID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteUserEvolinciteCrmNegotiations(
+  $filter: ModelEvolinciteUserEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteUserEvolinciteCrmNegotiations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteCrmNegotiationId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteCrmNegotiationsByEvolinciteCrmNegotiationId(
+  $evolinciteCrmNegotiationId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteCrmNegotiationsByEvolinciteCrmNegotiationId(
+    evolinciteCrmNegotiationId: $evolinciteCrmNegotiationId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteCrmNegotiationId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteUserEvolinciteCrmNegotiationsByEvolinciteUserId(
+  $evolinciteUserId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteUserEvolinciteCrmNegotiationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteUserEvolinciteCrmNegotiationsByEvolinciteUserId(
+    evolinciteUserId: $evolinciteUserId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteCrmNegotiationId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvolinciteRoomEvolinciteUser($id: ID!) {
+  getEvolinciteRoomEvolinciteUser(id: $id) {
+    id
+    evolinciteRoomId
+    evolinciteUserId
+    evolinciteRoom {
+      id
+      Key
+      name
+      state
+      meta
+      evolinciteCompanyID
+      createdAt
+      updatedAt
+      __typename
+    }
+    evolinciteUser {
+      id
+      name
+      nit
+      phone
+      picture
+      email
+      sub
+      meta
+      cv
+      contract
+      memos
+      personalMail
+      personalPhone
+      state
+      createdAt
+      updatedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+
+query ListEvolinciteRoomEvolinciteUsers(
+  $filter: ModelEvolinciteRoomEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvolinciteRoomEvolinciteUsers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteRoomId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRoomEvolinciteUsersByEvolinciteRoomId(
+  $evolinciteRoomId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRoomEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRoomEvolinciteUsersByEvolinciteRoomId(
+    evolinciteRoomId: $evolinciteRoomId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteRoomId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EvolinciteRoomEvolinciteUsersByEvolinciteUserId(
+  $evolinciteUserId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEvolinciteRoomEvolinciteUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  evolinciteRoomEvolinciteUsersByEvolinciteUserId(
+    evolinciteUserId: $evolinciteUserId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      evolinciteRoomId
+      evolinciteUserId
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
