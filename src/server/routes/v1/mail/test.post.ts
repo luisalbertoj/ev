@@ -1,7 +1,7 @@
-import { defineEventHandler, getRouterParam, readBody } from 'h3';
+import { H3Event, defineEventHandler, readBody } from 'h3';
 import { createTransport } from 'nodemailer';
 
-export default defineEventHandler(async (event: any) => {
+export default defineEventHandler(async (event: H3Event) => {
   try {
     const body = await readBody(event);
     console.log(body);
