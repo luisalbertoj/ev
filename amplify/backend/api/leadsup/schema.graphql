@@ -213,6 +213,13 @@ enum EvolinciteFunctionalities {
   TAG_CREATE
   TAG_EDIT
   TAG_DELETE
+  VIEW_LOG_HISTORY_BY_DEPARTMENT
+  VIEW_LOG_HISTORY_SUB_DEPARTMENTS
+  GENERAL_FIELD_CREATE
+  GENERAL_FIELD_EDIT
+  GENERAL_FIELD_DELETE
+  GENERAL_FIELD_VALUE_CREATE
+  GENERAL_FIELD_VALUE_EDIT
 }
 
 enum EvolinciteTransactionType {
@@ -1578,6 +1585,34 @@ type EvolinciteRequest @model @auth(rules: [{ allow: public }]) {
   evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
   evolinciteUserID: ID
     @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteGeneralField @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String
+  title: String
+  fieldType: EvolinciteField
+  order: Int
+  key: ID @index(name: "byEvolinciteKey", sortKeyFields: ["order"])
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
+  evolinciteUserID: ID
+    @index(name: "byEvolinciteUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type EvolinciteGeneralFieldValue @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  fieldId: ID @index(name: "byEvolinciteGeneralField")
+  elementId: ID @index(name: "byEvolinciteElement")
+  value: String
+  meta: AWSJSON
+  state: EvolinciteStates
+  evolinciteCompanyID: ID @index(name: "byEvolinciteCompany")
   createdAt: AWSDateTime
   updatedAt: AWSDateTime
 }

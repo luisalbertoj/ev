@@ -26,6 +26,9 @@ export default defineConfig(({ mode }) => ({
             },
           },
         },
+        experimental: {
+          tasks: true,
+        },
       },
       vite: {
         experimental: {
