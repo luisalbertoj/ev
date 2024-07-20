@@ -1,5 +1,5 @@
 import { H3Event, defineEventHandler, readBody } from 'h3';
-import * as Imap from 'imap';
+const Imap = require('imap');
 import { simpleParser } from 'mailparser';
 import { APIService } from '../../../API.service';
 
