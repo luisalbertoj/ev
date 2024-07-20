@@ -7,7 +7,7 @@ export default defineEventHandler((event: H3Event) => {
     'Access-Control-Allow-Credentials': 'true',
   });
   if (event.method === 'OPTIONS') {
-    event.node.res.statusCode = 204;
+    event.node.res.statusCode = 200;
     event.node.res.statusMessage = 'No Content.';
     return 'OK';
   }
