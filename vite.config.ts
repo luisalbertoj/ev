@@ -21,10 +21,6 @@ export default defineConfig(({ mode }) => ({
         routeRules: {
           '/api/v1/**': {
             cors: true,
-            headers: {
-              'Access-Control-Allow-Methods':
-                'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-            },
           },
         },
       },
