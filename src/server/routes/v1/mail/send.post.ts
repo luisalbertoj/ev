@@ -1,7 +1,12 @@
 import { getUrl } from 'aws-amplify/storage';
 import { H3Event, defineEventHandler, readBody } from 'h3';
 import type { Attachment } from 'nodemailer/lib/mailer';
-import { APIService, UpdateEvolinciteMailInput } from '../../../API.service';
+import {
+  APIService,
+  EvolinciteMailStates,
+  UpdateEvolinciteMailInput,
+} from '../../../API.service';
+import { sendMail } from '../../../core/mail/send-mail.service';
 
 export default defineEventHandler(async (event: H3Event) => {
   const body = await readBody(event);
