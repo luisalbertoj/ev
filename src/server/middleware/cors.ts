@@ -5,10 +5,11 @@ export default defineEventHandler((event: H3Event) => {
     'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Credentials': 'true',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
   });
-  if (event.method === 'OPTIONS') {
-    event.node.res.statusCode = 200;
-    event.node.res.statusMessage = 'OK';
+  if (event.method === 'OPTIONS' || !event.method) {
+    event.node.res.statusCode = 204;
+    event.node.res.statusMessage = 'No Content.';
     return 'OK';
   }
 });
