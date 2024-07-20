@@ -3,6 +3,9 @@
 //  This file was automatically generated and should not be edited.
 import { Client, generateClient, GraphQLResult } from 'aws-amplify/api';
 import { Observable } from 'rxjs';
+import { Connector } from './utils/connector';
+
+Connector.configure();
 
 export type __SubscriptionContainer = {
   onCreateEvolinciteCompetence: OnCreateEvolinciteCompetenceSubscription;
