@@ -1,6 +1,6 @@
-import { APIService } from '../../../API.service';
+/* import { APIService } from '../../../API.service';
 import { defineEventHandler, readBody } from 'h3';
-import { connect } from 'imap-simple';
+import {  } from 'imap';
 import { simpleParser } from 'mailparser';
 
 export default defineEventHandler(async (event) => {
@@ -94,3 +94,4 @@ export default defineEventHandler(async (event) => {
     );
   }
 });
+ */
