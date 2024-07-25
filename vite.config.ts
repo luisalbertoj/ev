@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
       nitro: {
         output: {
           dir: './dist/analog/public',
-          serverDir: './dist/analog/public/_worker.js',
+          serverDir: './dist/analog/public',
         },
         routeRules: {
           '/api/v1/**': {
