@@ -1,4 +1,4 @@
-import { getUrl } from 'aws-amplify/storage';
+/* import { getUrl } from 'aws-amplify/storage';
 import { H3Event, defineEventHandler, readBody } from 'h3';
 import type { Attachment } from 'nodemailer/lib/mailer';
 import {
@@ -120,3 +120,4 @@ async function getDocuments(
   }
   return rest;
 }
+ */

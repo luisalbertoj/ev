@@ -1,4 +1,4 @@
-import { H3Event, defineEventHandler, readBody } from 'h3';
+/* import { H3Event, defineEventHandler, readBody } from 'h3';
 import { createTransport } from 'nodemailer';
 
 export default defineEventHandler(async (event: H3Event) => {
@@ -76,3 +76,4 @@ const testConnection = async ({
     };
   }
 };
+ */
